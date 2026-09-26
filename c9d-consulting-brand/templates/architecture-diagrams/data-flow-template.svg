@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="Data flow diagram" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplMWIzMThkYS1jY2FjLTQwZWMtYjk5MC0xMzdlZjVjZTI3YzEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaECC5Bs/PJ1KhNoXqAea+/YAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyYmNjNGFlNy1hZmQ4LTQ4YjctODYwYS0yNWVjNDk4ZDhhYmFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoUiF9f4yliyS7UMk4VYR4xgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggh/OJf+TD3pdxg2cR1jRj+QJEnJprTau7gptiP3KC7l2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJodjSVdUIMj6IVc2GkYoMsAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAOONSi9xdqRBNe6hPZa7BQaeFyl6i+sox6eq/r5OGpwmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjPZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmUxYjMxOGRhLWNjYWMtNDBlYy1iOTkwLTEzN2VmNWNlMjdjMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjI2YTRkYWM1LTY2ZjgtNDI3My1hZGE0LTc1OTcwMTAwYzU0N3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCH84l/5MPel3GDZxHWNGP5AkScmmtNq7uCm2I/coLuXaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggDeOzujCikLLOnkH2owyL8isGMvIKfZwgg4qX7DQlpbiiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggwyU/E1lb2DlFvZ8FX/HYgFnihmfMn8V5paX9ovi4vVV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQBGy8HDy6tdOcLaPXKBKodkoyzRdyKsof88ji+MHTwDbjR34nUxL2/HQx56tljuX0zcbtEESLGh3mDXRWwnu4qw=</c2pa:manifest></metadata>
+  <title>Data flow — template</title>
+  <desc>Dossier-style data flow diagram showing inputs → transforms → outputs with error path routing.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap');
+
+      .chrome-file { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #5A5042; letter-spacing: 0.06em; }
+      .chrome-classification { font-family: 'Inter Tight', sans-serif; font-size: 11px; font-weight: 600; fill: #D6743A; letter-spacing: 0.18em; text-transform: uppercase; }
+      .chrome-section { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #5A5042; letter-spacing: 0.06em; text-transform: uppercase; }
+
+      .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; fill: #8A4824; letter-spacing: 0.18em; text-transform: uppercase; }
+      .figure-title { font-family: 'Inter Tight', sans-serif; font-size: 28px; font-weight: 400; fill: #F0E6D0; letter-spacing: -0.03em; }
+      .figure-subtitle { font-family: 'Inter Tight', sans-serif; font-size: 15px; fill: #8A7E6A; }
+
+      .node-title { font-family: 'Inter Tight', sans-serif; font-size: 13px; font-weight: 500; fill: #F0E6D0; }
+      .node-title-signal { fill: #D6743A; }
+      .node-body { font-family: 'Inter Tight', sans-serif; font-size: 11px; fill: #D8CDB8; }
+      .node-meta { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: #8A7E6A; letter-spacing: 0.06em; }
+      .lane-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; fill: #8A4824; letter-spacing: 0.18em; text-transform: uppercase; }
+
+      .rule-hairline { stroke: #2A2620; stroke-width: 1; fill: none; }
+      .rule-bright { stroke: #3D362C; stroke-width: 1; fill: none; }
+
+      .node-input { fill: #131210; stroke: #2A2620; stroke-width: 1; }
+      .node-transform { fill: #1A1815; stroke: #8A4824; stroke-width: 1.5; }
+      .node-output { fill: #131210; stroke: #3D362C; stroke-width: 1; }
+      .node-error { fill: #1A1210; stroke: #8B2A20; stroke-width: 1.5; }
+
+      .flow-line-main { stroke: #8A4824; stroke-width: 1.5; fill: none; }
+      .flow-line-secondary { stroke: #5A5042; stroke-width: 1; fill: none; }
+      .flow-line-error { stroke: #8B2A20; stroke-width: 1; fill: none; stroke-dasharray: 4 4; }
+
+      .flow-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #8A7E6A; letter-spacing: 0.06em; text-transform: uppercase; }
+
+      .caption-mono { font-family: 'JetBrains Mono', monospace; font-size: 8px; fill: #5A5042; letter-spacing: 0.05em; }
+    </style>
+
+    <marker id="arrow-main-df" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A4824" />
+    </marker>
+    <marker id="arrow-secondary-df" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5A5042" />
+    </marker>
+    <marker id="arrow-error-df" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8B2A20" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="700" fill="#0C0B08" />
+
+  <!-- Top chrome -->
+  <text x="40" y="34" class="chrome-file">FILE-C9D-FIG-2026-XXX</text>
+  <text x="600" y="34" class="chrome-classification" text-anchor="middle">CLIENT CONFIDENTIAL</text>
+  <text x="1160" y="34" class="chrome-section" text-anchor="end">§ FIG-05 / FLOW</text>
+  <line x1="40" y1="52" x2="1160" y2="52" class="rule-hairline" />
+
+  <!-- Figure header -->
+  <text x="40" y="98" class="eyebrow">FIG. 05 — DATA FLOW</text>
+  <text x="40" y="140" class="figure-title">Data flow template.</text>
+  <text x="40" y="168" class="figure-subtitle">Inputs left to outputs right. Amber marks main path. Red dashed marks error routing.</text>
+
+  <line x1="40" y1="195" x2="200" y2="195" class="rule-bright" />
+
+  <!-- ============================================================
+       LANE HEADERS
+       ============================================================ -->
+  <text x="120" y="230" class="lane-label">INPUTS</text>
+  <text x="500" y="230" class="lane-label">TRANSFORM</text>
+  <text x="880" y="230" class="lane-label">OUTPUTS</text>
+
+  <!-- Lane dividers -->
+  <line x1="380" y1="220" x2="380" y2="580" class="rule-hairline" />
+  <line x1="780" y1="220" x2="780" y2="580" class="rule-hairline" />
+
+  <!-- ============================================================
+       INPUTS COLUMN
+       ============================================================ -->
+  <g transform="translate(40, 250)">
+    <rect x="0" y="0" width="180" height="70" class="node-input" />
+    <text x="16" y="22" class="node-meta">SOURCE · 01</text>
+    <text x="16" y="44" class="node-title">Input source A</text>
+    <text x="16" y="62" class="node-body">Event stream</text>
+  </g>
+
+  <g transform="translate(200, 340)">
+    <rect x="0" y="0" width="180" height="70" class="node-input" />
+    <text x="16" y="22" class="node-meta">SOURCE · 02</text>
+    <text x="16" y="44" class="node-title">Input source B</text>
+    <text x="16" y="62" class="node-body">Batch upload</text>
+  </g>
+
+  <g transform="translate(40, 430)">
+    <rect x="0" y="0" width="180" height="70" class="node-input" />
+    <text x="16" y="22" class="node-meta">SOURCE · 03</text>
+    <text x="16" y="44" class="node-title">Input source C</text>
+    <text x="16" y="62" class="node-body">API polling</text>
+  </g>
+
+  <!-- ============================================================
+       TRANSFORM COLUMN
+       ============================================================ -->
+  <g transform="translate(440, 260)">
+    <rect x="0" y="0" width="280" height="80" class="node-transform" />
+    <text x="16" y="22" class="node-meta" fill="#8A4824">TRANSFORM · 01</text>
+    <text x="16" y="44" class="node-title node-title-signal">Primary transformation</text>
+    <text x="16" y="62" class="node-body">Normalization + validation</text>
+    <text x="16" y="76" class="node-body">Kafka consumer / stream processor</text>
+  </g>
+
+  <g transform="translate(440, 370)">
+    <rect x="0" y="0" width="280" height="80" class="node-transform" />
+    <text x="16" y="22" class="node-meta" fill="#8A4824">TRANSFORM · 02</text>
+    <text x="16" y="44" class="node-title node-title-signal">Enrichment</text>
+    <text x="16" y="62" class="node-body">Join reference data</text>
+    <text x="16" y="76" class="node-body">Lookup service (500ms SLA)</text>
+  </g>
+
+  <g transform="translate(440, 480)">
+    <rect x="0" y="0" width="280" height="80" class="node-error" />
+    <text x="16" y="22" class="node-meta" fill="#8B2A20">ERROR PATH</text>
+    <text x="16" y="44" class="node-title" fill="#C0392B">DLQ + retry</text>
+    <text x="16" y="62" class="node-body">Dead-letter queue with backoff</text>
+    <text x="16" y="76" class="node-body">Max 3 retries, then quarantine</text>
+  </g>
+
+  <!-- ============================================================
+       OUTPUTS COLUMN
+       ============================================================ -->
+  <g transform="translate(820, 260)">
+    <rect x="0" y="0" width="200" height="70" class="node-output" />
+    <text x="16" y="22" class="node-meta">SINK · 01</text>
+    <text x="16" y="44" class="node-title">Downstream system</text>
+    <text x="16" y="62" class="node-body">Warehouse ingestion</text>
+  </g>
+
+  <g transform="translate(820, 350)">
+    <rect x="0" y="0" width="200" height="70" class="node-output" />
+    <text x="16" y="22" class="node-meta">SINK · 02</text>
+    <text x="16" y="44" class="node-title">Analytics store</text>
+    <text x="16" y="62" class="node-body">Real-time dashboards</text>
+  </g>
+
+  <g transform="translate(820, 440)">
+    <rect x="0" y="0" width="200" height="70" class="node-output" />
+    <text x="16" y="22" class="node-meta">SINK · 03</text>
+    <text x="16" y="44" class="node-title">Audit log</text>
+    <text x="16" y="62" class="node-body">Compliance archive</text>
+  </g>
+
+  <!-- ============================================================
+       FLOW LINES
+       ============================================================ -->
+
+  <!-- Inputs to transform 01 -->
+  <line x1="220" y1="285" x2="440" y2="285" class="flow-line-main" marker-end="url(#arrow-main-df)" />
+  <line x1="380" y1="375" x2="440" y2="300" class="flow-line-secondary" marker-end="url(#arrow-secondary-df)" />
+  <line x1="220" y1="465" x2="440" y2="330" class="flow-line-secondary" marker-end="url(#arrow-secondary-df)" />
+
+  <!-- Transform 01 to Transform 02 -->
+  <line x1="580" y1="340" x2="580" y2="370" class="flow-line-main" marker-end="url(#arrow-main-df)" />
+
+  <!-- Transform 02 to outputs -->
+  <line x1="720" y1="395" x2="820" y2="290" class="flow-line-main" marker-end="url(#arrow-main-df)" />
+  <line x1="720" y1="410" x2="820" y2="380" class="flow-line-main" marker-end="url(#arrow-main-df)" />
+  <line x1="720" y1="425" x2="820" y2="465" class="flow-line-secondary" marker-end="url(#arrow-secondary-df)" />
+
+  <!-- Error path from transform 01 -->
+  <line x1="580" y1="345" x2="580" y2="475" class="flow-line-error" marker-end="url(#arrow-error-df)" />
+
+  <!-- ============================================================
+       Legend
+       ============================================================ -->
+  <g transform="translate(40, 610)">
+    <text x="0" y="0" class="eyebrow">LEGEND</text>
+
+    <line x1="0" y1="20" x2="30" y2="20" class="flow-line-main" marker-end="url(#arrow-main-df)" />
+    <text x="40" y="24" class="node-body">Main flow</text>
+
+    <line x1="140" y1="20" x2="170" y2="20" class="flow-line-secondary" marker-end="url(#arrow-secondary-df)" />
+    <text x="180" y="24" class="node-body">Secondary flow</text>
+
+    <line x1="290" y1="20" x2="320" y2="20" class="flow-line-error" marker-end="url(#arrow-error-df)" />
+    <text x="330" y="24" class="node-body">Error / retry path</text>
+  </g>
+
+  <!-- Bottom chrome -->
+  <line x1="40" y1="655" x2="1160" y2="655" class="rule-hairline" />
+  <text x="40" y="675" class="caption-mono">FIG. 05 — DATA FLOW · MAIN PATH AMBER · ERROR PATH DASHED RED · SECONDARY INK</text>
+  <text x="1160" y="675" class="caption-mono" text-anchor="end">C9D CONSULTING · DOSSIER FIG. TEMPLATE</text>
+</svg>

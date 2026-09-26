@@ -1,0 +1,117 @@
+{
+  "//": "C9D Consulting Dossier theme for Mermaid diagrams (v11+). Import as themeVariables in your Mermaid config.",
+  "//_usage_1": "In Markdown / HTML rendering: mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: <this object> })",
+  "//_usage_2": "In a Mermaid file directly: %%{init: {'theme':'base', 'themeVariables': <this object>}}%%",
+  "//_render_note": "Mermaid does not have direct font support for external Google fonts in some render environments. Load Inter Tight / JetBrains Mono via <link> or CSS @import first, then set fontFamily.",
+
+  "theme": "base",
+
+  "themeVariables": {
+    "//_font": "Font stack — Inter Tight primary, system sans fallback",
+    "fontFamily": "'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif",
+    "fontSize": "14px",
+
+    "//_ground": "Dark ground tokens",
+    "background": "#0C0B08",
+    "mainBkg": "#131210",
+    "secondBkg": "#1A1815",
+    "tertiaryBkg": "#161410",
+
+    "//_primary_signal": "Sodium amber — nodes, emphasis, load-bearing",
+    "primaryColor": "#1A1815",
+    "primaryTextColor": "#F0E6D0",
+    "primaryBorderColor": "#8A4824",
+
+    "//_secondary_standard": "Standard ink node styling",
+    "secondaryColor": "#131210",
+    "secondaryTextColor": "#D8CDB8",
+    "secondaryBorderColor": "#2A2620",
+
+    "//_tertiary_emphasis": "Emphasis / elevated ground",
+    "tertiaryColor": "#1A1815",
+    "tertiaryTextColor": "#F0E6D0",
+    "tertiaryBorderColor": "#3D362C",
+
+    "//_lines": "Connection line tokens",
+    "lineColor": "#5A5042",
+    "arrowheadColor": "#5A5042",
+    "edgeLabelBackground": "#0C0B08",
+
+    "//_signal_line": "Amber flow for main path emphasis",
+    "signalColor": "#8A4824",
+    "signalTextColor": "#D6743A",
+
+    "//_text": "Ink hierarchy",
+    "textColor": "#D8CDB8",
+    "titleColor": "#F0E6D0",
+    "labelColor": "#D8CDB8",
+    "labelBackground": "#0C0B08",
+
+    "//_notes_annotations": "Muted annotations",
+    "noteBkgColor": "#131210",
+    "noteTextColor": "#8A7E6A",
+    "noteBorderColor": "#2A2620",
+
+    "//_critical": "Classified red for refusals / stop calls",
+    "criticalBorderColor": "#8B2A20",
+    "criticalBkgColor": "#1A1210",
+
+    "//_flowchart_specific": "",
+    "nodeBorder": "#2A2620",
+    "clusterBkg": "#131210",
+    "clusterBorder": "#3D362C",
+    "defaultLinkColor": "#5A5042",
+    "titleColor": "#F0E6D0",
+    "nodeTextColor": "#F0E6D0",
+
+    "//_sequence_diagram": "",
+    "actorBkg": "#131210",
+    "actorBorder": "#8A4824",
+    "actorTextColor": "#F0E6D0",
+    "actorLineColor": "#5A5042",
+    "signalColor": "#D6743A",
+    "signalTextColor": "#D8CDB8",
+    "labelBoxBkgColor": "#131210",
+    "labelBoxBorderColor": "#8A4824",
+    "labelTextColor": "#F0E6D0",
+    "loopTextColor": "#D8CDB8",
+    "activationBorderColor": "#8A4824",
+    "activationBkgColor": "#1A1815",
+    "sequenceNumberColor": "#0C0B08",
+
+    "//_gantt": "",
+    "sectionBkgColor": "#131210",
+    "altSectionBkgColor": "#0C0B08",
+    "sectionBkgColor2": "#1A1815",
+    "excludeBkgColor": "#0C0B08",
+    "taskBorderColor": "#2A2620",
+    "taskBkgColor": "#1A1815",
+    "activeTaskBorderColor": "#8A4824",
+    "activeTaskBkgColor": "#8A4824",
+    "gridColor": "#2A2620",
+    "doneTaskBkgColor": "#131210",
+    "doneTaskBorderColor": "#5A5042",
+    "critBorderColor": "#8B2A20",
+    "critBkgColor": "#1A1210",
+    "todayLineColor": "#D6743A",
+
+    "//_state_diagram": "",
+    "labelColor": "#D8CDB8",
+    "altBackground": "#131210",
+
+    "//_class_diagram": "",
+    "classText": "#F0E6D0",
+
+    "//_er_diagram": "",
+    "attributeBackgroundColorOdd": "#131210",
+    "attributeBackgroundColorEven": "#1A1815"
+  },
+
+  "//_examples": {
+    "flowchart_html": "<!DOCTYPE html><html><head><link href='https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap' rel='stylesheet'><script type='module'>import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs'; mermaid.initialize({ theme: 'base', themeVariables: /*paste the themeVariables object above*/ });</script></head><body style='background:#0C0B08'><pre class='mermaid'>flowchart TB\n  A[Trigger] --> B{Decision}\n  B -->|Yes| C[Ship]\n  B -->|No| D[Stop call]\n  style D stroke:#8B2A20,fill:#1A1210</pre></body></html>",
+
+    "sequence_example": "sequenceDiagram\n  autonumber\n  participant O as Operator\n  participant B as Buyer\n  participant D as Diligence team\n  O->>B: Diagnostic memo\n  B->>D: Playbook v1.0\n  D-->>O: Findings\n  O->>B: Handoff pack",
+
+    "gantt_example": "gantt\n  title Engagement Timeline\n  dateFormat YYYY-MM-DD\n  section Diagnostic\n  Assess :a1, 2026-03-01, 4w\n  section Playbook\n  Design :a2, after a1, 6w\n  section Handoff\n  Transfer :a3, after a2, 4w\n  section Close\n  Sign off :milestone, after a3, 0d"
+  }
+}

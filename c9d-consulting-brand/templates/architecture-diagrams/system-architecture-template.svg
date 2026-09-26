@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="System architecture diagram" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplOTg1M2ZmNC1jMzM3LTQ3ZWEtYTE0NC01MjZmODQ4MWExZjQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGilKanUXEwLbkMH60dNdLsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1NWZkNmM1YS1lNDdhLTRkNmMtYmU3OS0wZDJjNGQxZmU1NzRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoYcVy5BF1w8QzHPXMo52kkgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg6RIDbh1GOOKD4q6z89iUvQxHAlBA2zaNfCKSK0U9fsKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJ7+M5+6czJFxjHhw+0dxLAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDiOM1AFC9Bt+lYu0dnyvg5hcfL8dI+0DuGq9nxFvIP1mRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjZZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU5ODUzZmY0LWMzMzctNDdlYS1hMTQ0LTUyNmY4NDgxYTFmNC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmU3MGZjMTdiLTI0YmUtNGQ1YS05Yjk2LWZlMmZiZDEwMTg0NHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDpEgNuHUY44oPirrPz2JS9DEcCUEDbNo18IpIrRT1+wqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggpIR9s4RnjPGFMz04ZGxo65/2YANFmZJ5xBAZUkTv74OiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggphSBpeNf1aS/npUKPMgm4x04O/VVSw9V8x+UngsZiZl0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQJSMvO57VXPGkG0lh1YxH5tl2fl0ul20DO8WFRA0bfldcknjAtEZ3Loq/9idlWXnK6ySUcSIVQ1qkp0+E2Zgsp8=</c2pa:manifest></metadata>
+  <title>System architecture — template</title>
+  <desc>Dossier-style system architecture diagram. Layer-based composition with amber accent for load-bearing components.</desc>
+
+  <!-- Import fonts -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap');
+
+      .chrome-file { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; fill: #5A5042; letter-spacing: 0.06em; }
+      .chrome-classification { font-family: 'Inter Tight', sans-serif; font-size: 11px; font-weight: 600; fill: #D6743A; letter-spacing: 0.18em; text-transform: uppercase; }
+      .chrome-section { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; fill: #5A5042; letter-spacing: 0.06em; text-transform: uppercase; }
+
+      .eyebrow { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; font-weight: 600; fill: #8A4824; letter-spacing: 0.18em; text-transform: uppercase; }
+      .figure-title { font-family: 'Inter Tight', sans-serif; font-size: 28px; font-weight: 400; fill: #F0E6D0; letter-spacing: -0.03em; }
+      .figure-subtitle { font-family: 'Inter Tight', sans-serif; font-size: 15px; fill: #8A7E6A; }
+
+      .layer-label { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; font-weight: 600; fill: #8A4824; letter-spacing: 0.18em; text-transform: uppercase; }
+      .box-title { font-family: 'Inter Tight', sans-serif; font-size: 14px; font-weight: 500; fill: #F0E6D0; }
+      .box-body { font-family: 'Inter Tight', sans-serif; font-size: 11px; fill: #D8CDB8; }
+      .box-meta { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9px; fill: #8A7E6A; letter-spacing: 0.08em; }
+      .box-title-amber { fill: #D6743A; }
+
+      .rule-hairline { stroke: #2A2620; stroke-width: 1; fill: none; }
+      .rule-bright { stroke: #3D362C; stroke-width: 1; fill: none; }
+      .rule-signal { stroke: #8A4824; stroke-width: 1; fill: none; }
+
+      .box-fill-standard { fill: #131210; stroke: #2A2620; stroke-width: 1; }
+      .box-fill-emphasis { fill: #1A1815; stroke: #3D362C; stroke-width: 1; }
+      .box-fill-signal { fill: #1A1815; stroke: #8A4824; stroke-width: 1.5; }
+
+      .arrow-line { stroke: #5A5042; stroke-width: 1; fill: none; }
+      .arrow-line-signal { stroke: #8A4824; stroke-width: 1; fill: none; }
+
+      .caption-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 8px; fill: #5A5042; letter-spacing: 0.05em; }
+    </style>
+
+    <!-- Arrow markers -->
+    <marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5A5042" />
+    </marker>
+    <marker id="arrow-signal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A4824" />
+    </marker>
+  </defs>
+
+  <!-- Dark ground background -->
+  <rect x="0" y="0" width="1200" height="800" fill="#0C0B08" />
+
+  <!-- ============================================================
+       TOP CHROME — file ID / classification / section marker
+       ============================================================ -->
+  <text x="40" y="34" class="chrome-file">FILE-C9D-FIG-2026-XXX</text>
+  <text x="600" y="34" class="chrome-classification" text-anchor="middle">CLIENT CONFIDENTIAL</text>
+  <text x="1160" y="34" class="chrome-section" text-anchor="end">§ FIG-01 / ARCHITECTURE</text>
+  <line x1="40" y1="52" x2="1160" y2="52" class="rule-hairline" />
+
+  <!-- ============================================================
+       FIGURE HEADER — eyebrow + title + subtitle
+       ============================================================ -->
+  <text x="40" y="98" class="eyebrow">FIG. 01 — SYSTEM ARCHITECTURE</text>
+  <text x="40" y="140" class="figure-title">System architecture template.</text>
+  <text x="40" y="168" class="figure-subtitle">Three-layer composition. Replace boxes with system components. Amber outline marks load-bearing.</text>
+
+  <!-- Rule between header and diagram -->
+  <line x1="40" y1="195" x2="200" y2="195" class="rule-bright" />
+
+  <!-- ============================================================
+       LAYER 1 — Client / Interface layer
+       ============================================================ -->
+  <text x="40" y="240" class="layer-label">LAYER 01 · CLIENT</text>
+
+  <!-- Box A: Standard component -->
+  <g transform="translate(40, 260)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-standard" />
+    <text x="16" y="24" class="box-meta">01</text>
+    <text x="16" y="46" class="box-title">Component A</text>
+    <text x="16" y="66" class="box-body">Standard description</text>
+  </g>
+
+  <!-- Box B: Standard component -->
+  <g transform="translate(275, 260)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-standard" />
+    <text x="16" y="24" class="box-meta">02</text>
+    <text x="16" y="46" class="box-title">Component B</text>
+    <text x="16" y="66" class="box-body">Standard description</text>
+  </g>
+
+  <!-- Box C: Emphasis component -->
+  <g transform="translate(510, 260)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-emphasis" />
+    <text x="16" y="24" class="box-meta">03</text>
+    <text x="16" y="46" class="box-title">Component C</text>
+    <text x="16" y="66" class="box-body">Emphasis: elevated ground</text>
+  </g>
+
+  <!-- Box D: Signal / load-bearing component -->
+  <g transform="translate(745, 260)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-signal" />
+    <text x="16" y="24" class="box-meta" fill="#8A4824">LOAD-BEARING</text>
+    <text x="16" y="46" class="box-title box-title-amber">Component D</text>
+    <text x="16" y="66" class="box-body">Signal outline in amber</text>
+  </g>
+
+  <!-- Layer 1 rule -->
+  <line x1="40" y1="370" x2="1160" y2="370" class="rule-hairline" />
+
+  <!-- ============================================================
+       LAYER 2 — Service / Application layer
+       ============================================================ -->
+  <text x="40" y="410" class="layer-label">LAYER 02 · SERVICE</text>
+
+  <!-- Box E -->
+  <g transform="translate(40, 430)">
+    <rect x="0" y="0" width="435" height="80" class="box-fill-standard" />
+    <text x="16" y="24" class="box-meta">04</text>
+    <text x="16" y="46" class="box-title">Service E · Wider composite</text>
+    <text x="16" y="66" class="box-body">Spans two column widths for grouped functions</text>
+  </g>
+
+  <!-- Box F -->
+  <g transform="translate(510, 430)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-emphasis" />
+    <text x="16" y="24" class="box-meta">05</text>
+    <text x="16" y="46" class="box-title">Service F</text>
+    <text x="16" y="66" class="box-body">Emphasis layer</text>
+  </g>
+
+  <!-- Box G -->
+  <g transform="translate(745, 430)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-standard" />
+    <text x="16" y="24" class="box-meta">06</text>
+    <text x="16" y="46" class="box-title">Service G</text>
+    <text x="16" y="66" class="box-body">Standard</text>
+  </g>
+
+  <!-- Connection arrows: Layer 1 to Layer 2 -->
+  <line x1="140" y1="340" x2="140" y2="425" class="arrow-line" marker-end="url(#arrow-ink)" />
+  <line x1="375" y1="340" x2="375" y2="425" class="arrow-line" marker-end="url(#arrow-ink)" />
+  <line x1="610" y1="340" x2="610" y2="425" class="arrow-line" marker-end="url(#arrow-ink)" />
+  <line x1="845" y1="340" x2="845" y2="425" class="arrow-line-signal" marker-end="url(#arrow-signal)" />
+
+  <!-- Layer 2 rule -->
+  <line x1="40" y1="540" x2="1160" y2="540" class="rule-hairline" />
+
+  <!-- ============================================================
+       LAYER 3 — Data / Infrastructure layer
+       ============================================================ -->
+  <text x="40" y="580" class="layer-label">LAYER 03 · DATA</text>
+
+  <!-- Data store 1 -->
+  <g transform="translate(40, 600)">
+    <rect x="0" y="0" width="435" height="80" class="box-fill-emphasis" />
+    <text x="16" y="24" class="box-meta">07</text>
+    <text x="16" y="46" class="box-title">Primary store</text>
+    <text x="16" y="66" class="box-body">Postgres / operational data · region-primary</text>
+  </g>
+
+  <!-- Data store 2 -->
+  <g transform="translate(510, 600)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-emphasis" />
+    <text x="16" y="24" class="box-meta">08</text>
+    <text x="16" y="46" class="box-title">Cache</text>
+    <text x="16" y="66" class="box-body">Read replica</text>
+  </g>
+
+  <!-- Data store 3 -->
+  <g transform="translate(745, 600)">
+    <rect x="0" y="0" width="200" height="80" class="box-fill-signal" />
+    <text x="16" y="24" class="box-meta" fill="#8A4824">LOAD-BEARING</text>
+    <text x="16" y="46" class="box-title box-title-amber">Event bus</text>
+    <text x="16" y="66" class="box-body">Kafka · downstream feed</text>
+  </g>
+
+  <!-- Connection arrows: Layer 2 to Layer 3 -->
+  <line x1="245" y1="510" x2="245" y2="595" class="arrow-line" marker-end="url(#arrow-ink)" />
+  <line x1="610" y1="510" x2="610" y2="595" class="arrow-line" marker-end="url(#arrow-ink)" />
+  <line x1="845" y1="510" x2="845" y2="595" class="arrow-line-signal" marker-end="url(#arrow-signal)" />
+
+  <!-- ============================================================
+       BOTTOM CHROME — figure caption
+       ============================================================ -->
+  <line x1="40" y1="725" x2="1160" y2="725" class="rule-hairline" />
+  <text x="40" y="750" class="caption-mono">FIG. 01 — SYSTEM ARCHITECTURE · REPLACE COMPONENTS WITH ACTUAL SYSTEM NAMES · AMBER OUTLINE INDICATES LOAD-BEARING</text>
+  <text x="1160" y="750" class="caption-mono" text-anchor="end">C9D CONSULTING · DOSSIER FIG. TEMPLATE</text>
+</svg>

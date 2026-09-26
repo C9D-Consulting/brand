@@ -1,0 +1,210 @@
+/* ============================================================
+   C9D Consulting Brand Tokens — The Dossier
+   v1.0 · 2026
+   
+   Drop-in CSS variables for any C9D Consulting web surface.
+   Dark mode is the default. Light mode tokens are provided
+   under .light-mode for print-only artifacts.
+   ============================================================ */
+
+:root {
+  /* === GROUND (4 tokens) ============================ */
+  --bg: #0c0b08;           /* Page ground, deepest layer */
+  --bg-2: #131210;         /* Card and panel backgrounds */
+  --bg-3: #1a1815;         /* Inset blocks within cards */
+  --paper: #161410;        /* Stamps and signed artifact moments */
+
+  /* === RULE (2 tokens) ============================== */
+  --rule: #2a2620;         /* Standard hairlines */
+  --rule-bright: #3d362c;  /* Emphasized borders, active states */
+
+  /* === INK (4 tokens, warm parchment) ================ */
+  --ink-bright: #f0e6d0;   /* Headlines, key data, hero copy */
+  --ink: #d8cdb8;          /* Default body text */
+  --ink-mute: #8a7e6a;     /* Supporting copy, sidebar notes */
+  --ink-dim: #5a5042;      /* Tertiary metadata, page numbers */
+
+  /* === SIGNAL — sodium amber (2 tokens) =============== */
+  --stamp: #d6743a;        /* Primary signal: case IDs, markers, emphasis */
+  --stamp-dim: #8a4824;    /* Reserved/aged secondary signal */
+
+  /* === CRIT — classified red (1 token) =============== */
+  --classified: #c0392b;   /* Refusals and crit-vulnerability only */
+
+  /* === SPATIAL ====================================== */
+  --space-1: 4px;          /* Tight inline adjustments */
+  --space-2: 8px;          /* Within-component spacing */
+  --space-3: 16px;         /* Standard padding inside cards */
+  --space-4: 24px;         /* Between paragraphs, between rows */
+  --space-5: 32px;         /* Card padding */
+  --space-6: 48px;         /* Section internal padding */
+  --space-7: 64px;         /* Between sections */
+  --space-8: 96px;         /* Between major page divisions */
+  --space-9: 128px;        /* Hero / section opener vertical breathing */
+
+  /* === TYPOGRAPHY =================================== */
+  --font-display: 'Inter Tight', Inter, -apple-system, system-ui, sans-serif;
+  --font-body: 'Inter Tight', Inter, -apple-system, system-ui, sans-serif;
+  --font-italic: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Type scale (8 steps) */
+  --size-display-xl: clamp(72px, 9vw, 116px);
+  --size-display-l: clamp(48px, 6vw, 72px);
+  --size-display-m: clamp(36px, 4vw, 48px);
+  --size-h1: clamp(22px, 2.2vw, 30px);
+  --size-h2: clamp(18px, 1.8vw, 22px);
+  --size-body: 17px;
+  --size-small: 13px;
+  --size-xs: 11px;
+
+  /* Line heights */
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-normal: 1.6;
+
+  /* Letter-spacing */
+  --track-display: -0.04em;
+  --track-heading: -0.03em;
+  --track-body: 0;
+  --track-mono: 0.04em;
+  --track-eyebrow: 0.18em;
+
+  /* === BORDERS ====================================== */
+  --border-hairline: 0.5px solid var(--rule);
+  --border-standard: 1px solid var(--rule);
+  --border-bright: 1px solid var(--rule-bright);
+  --border-signal: 1px solid var(--stamp-dim);
+
+  /* === RADIUS ======================================= */
+  /* The Dossier system uses minimal radius. 0 default; 4px max. */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* === COMPOSITION RATIOS (informational) ============ */
+  /* 70% ground · 22% ink · 6% signal · 2% crit */
+  /* Enforced by composition discipline, not by CSS. */
+}
+
+
+/* ============================================================
+   LIGHT MODE — print-only artifacts
+   
+   NOTE: The specific light-mode hex values below are reasonable
+   derivations from the dark-mode palette but were NOT specified
+   in locked source. They are proposals for review, not locked
+   decisions. Verify against c9d-design-system-vol-01.html
+   before using in any print deliverable.
+   
+   Apply to <html class="light-mode"> for printable surfaces.
+   ============================================================ */
+
+.light-mode {
+  --bg: #f5f1e8;
+  --bg-2: #ebe5d6;
+  --bg-3: #e0d8c5;
+  --paper: #ede7d4;
+  --rule: #c8bda5;
+  --rule-bright: #a89c82;
+  --ink-bright: #1a1612;
+  --ink: #2e2820;
+  --ink-mute: #5a5042;
+  --ink-dim: #8a7e6a;
+  --stamp: #9c4f24;
+  --stamp-dim: #6b3818;
+  --classified: #8b2a20;
+}
+
+
+/* ============================================================
+   PRINT MEDIA — automatically apply light mode for printing
+   ============================================================ */
+
+@media print {
+  :root {
+    --bg: #ffffff;
+    --bg-2: #f8f4eb;
+    --bg-3: #ebe5d6;
+    --paper: #f8f4eb;
+    --rule: #c8bda5;
+    --rule-bright: #a89c82;
+    --ink-bright: #000000;
+    --ink: #1a1612;
+    --ink-mute: #5a5042;
+    --ink-dim: #8a7e6a;
+    --stamp: #9c4f24;
+    --stamp-dim: #6b3818;
+    --classified: #8b2a20;
+  }
+
+  body { background: white !important; color: black; }
+}
+
+
+/* ============================================================
+   UTILITY CLASSES — semantic helpers for common patterns
+   ============================================================ */
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--size-xs);
+  color: var(--ink-mute);
+  letter-spacing: var(--track-mono);
+}
+
+.stamp-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: var(--track-eyebrow);
+  color: var(--stamp);
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--track-eyebrow);
+  color: var(--stamp-dim);
+  font-weight: 600;
+}
+
+.italic-accent {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--stamp);
+}
+
+.rule-hairline {
+  border: none;
+  height: 1px;
+  background: var(--rule);
+  margin: var(--space-5) 0;
+}
+
+.rule-bright {
+  border: none;
+  height: 1px;
+  background: var(--rule-bright);
+  margin: var(--space-5) 0;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink-bright);
+}
+
+.wordmark__c9d { color: var(--stamp); }
+
+.classified-stamp {
+  color: var(--classified);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-eyebrow);
+}

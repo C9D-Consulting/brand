@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C9D Consulting — Logo Showcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;350;400;500&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0b08;
+    --bg-2: #131210;
+    --bg-3: #1a1815;
+    --rule: #2a2620;
+    --rule-bright: #3d362c;
+    --ink-bright: #f0e6d0;
+    --ink: #d8cdb8;
+    --ink-mute: #8a7e6a;
+    --ink-dim: #5a5042;
+    --stamp: #d6743a;
+    --stamp-dim: #8a4824;
+    --bg-light: #f5f1e8;
+    --bg-2-light: #ebe5d6;
+    --rule-light: #c8bda5;
+    --ink-bright-light: #1a1612;
+    --ink-mute-light: #5a5042;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); font-family: 'Inter Tight', sans-serif; }
+  body { background: var(--bg); color: var(--ink); padding: 0; margin: 0; }
+  .page { max-width: 1400px; margin: 0 auto; padding: 96px 64px 128px; }
+
+  header.chrome {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 16px 48px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 11px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; color: var(--ink-mute); }
+  .stamp-label {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--stamp);
+    font-size: 10px;
+  }
+  .chrome__cell--center { text-align: center; }
+  .chrome__cell--right { text-align: right; }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    color: var(--ink-bright);
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--stamp-dim);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .hero-rule {
+    border: none;
+    height: 1px;
+    background: var(--rule-bright);
+    margin: 24px 0;
+    width: 240px;
+  }
+  .subtitle {
+    color: var(--ink-mute);
+    font-size: 18px;
+    max-width: 60ch;
+    margin-bottom: 96px;
+  }
+
+  section.variant {
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--rule);
+  }
+  section.variant:last-child { border-bottom: 0; }
+
+  .variant__header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+  }
+  .variant__meta { }
+  .variant__code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--stamp);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .variant__title {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--ink-bright);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .variant__use {
+    font-size: 14px;
+    color: var(--ink-mute);
+    line-height: 1.6;
+    max-width: 50ch;
+  }
+  .variant__filename {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-dim);
+    margin-top: 12px;
+    word-break: break-all;
+  }
+
+  .stage {
+    padding: 64px 48px;
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+  }
+  .stage--dark { background: var(--bg-2); }
+  .stage--light { background: var(--bg-light); }
+  .stage--amber { background: var(--stamp); }
+
+  .stage svg { max-width: 100%; height: auto; display: block; }
+
+  .stage--size-lg svg { width: 640px; }
+  .stage--size-md svg { width: 400px; }
+  .stage--size-sm svg { width: 240px; }
+  .stage--square svg { width: 200px; height: 200px; }
+
+  .sizes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .size-item {
+    padding: 32px;
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+  }
+  .size-item svg { display: block; }
+  .size-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 64px 48px 48px;
+    border-top: 1px solid var(--rule);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .footer__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ink-mute);
+    font-size: 13px;
+  }
+  .footer__closer {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--stamp);
+    font-size: 22px;
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<header class="chrome">
+  <div class="mono">FILE-BRAND-2026-LOGO-01</div>
+  <div class="stamp-label chrome__cell--center">OPERATING EVIDENCE</div>
+  <div class="mono chrome__cell--right">§ 01 · LOGO SYSTEM</div>
+</header>
+
+<div class="page">
+  <div class="eyebrow">SECTION 01 — LOGO SYSTEM</div>
+  <h1>C9D Consulting<br/>logo variants.</h1>
+  <hr class="hero-rule">
+  <p class="subtitle">Eight production lockups. Inter Tight 400 with -0.04em tracking. "C9D" in sodium amber; "Consulting" in warm ink. The Dossier system applied.</p>
+
+  <!-- 1. Primary horizontal dark -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-01 · PRIMARY HORIZONTAL</div>
+      <div class="variant__meta">
+        <div class="variant__title">Primary horizontal wordmark — dark background</div>
+        <div class="variant__use">Default wordmark for dark-mode website headers, deck slide chrome, document headers, LinkedIn banner, email signatures. This is the mark to use unless a specific context calls for a different lockup.</div>
+        <div class="variant__filename">c9d-consulting-wordmark-horizontal-dark.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--dark stage--size-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+        <text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px">
+          <tspan fill="#d6743a">C9D</tspan>
+          <tspan fill="#f0e6d0" dx="24">Consulting</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="sizes">
+      <div>
+        <div class="size-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="180"><text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px"><tspan fill="#d6743a">C9D</tspan><tspan fill="#f0e6d0" dx="24">Consulting</tspan></text></svg></div>
+        <div class="size-label">180 PX WIDTH</div>
+      </div>
+      <div>
+        <div class="size-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="280"><text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px"><tspan fill="#d6743a">C9D</tspan><tspan fill="#f0e6d0" dx="24">Consulting</tspan></text></svg></div>
+        <div class="size-label">280 PX WIDTH</div>
+      </div>
+      <div>
+        <div class="size-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="380"><text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px"><tspan fill="#d6743a">C9D</tspan><tspan fill="#f0e6d0" dx="24">Consulting</tspan></text></svg></div>
+        <div class="size-label">380 PX WIDTH</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Primary horizontal light -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-02 · PRIMARY HORIZONTAL / LIGHT</div>
+      <div class="variant__meta">
+        <div class="variant__title">Primary horizontal wordmark — light background</div>
+        <div class="variant__use">Same lockup for printed materials — letterheads, engagement letters, signed SOWs going to counsel, board memos in binder print. Color values shifted to the light-mode token map so contrast holds on cream and paper backgrounds.</div>
+        <div class="variant__filename">c9d-consulting-wordmark-horizontal-light.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--light stage--size-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+        <text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px">
+          <tspan fill="#9c4f24">C9D</tspan>
+          <tspan fill="#1a1612" dx="24">Consulting</tspan>
+        </text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 3. Stacked dark -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-03 · STACKED</div>
+      <div class="variant__meta">
+        <div class="variant__title">Stacked wordmark — square contexts, dark background</div>
+        <div class="variant__use">Square-format contexts: app icons at larger sizes, social media avatars (LinkedIn company logo, X/Twitter avatar), any placement where horizontal space is constrained but the mark needs to breathe. "Consulting" set at half the display size below "C9D".</div>
+        <div class="variant__filename">c9d-consulting-wordmark-stacked-dark.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="320" height="213">
+        <text x="60" y="200" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:176px;letter-spacing:-7.04px" fill="#d6743a">C9D</text>
+        <text x="60" y="320" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:88px;letter-spacing:-3.52px" fill="#f0e6d0">Consulting</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 4. Stacked light -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-04 · STACKED / LIGHT</div>
+      <div class="variant__meta">
+        <div class="variant__title">Stacked wordmark — light background</div>
+        <div class="variant__use">Same as L-03 for light-mode surfaces. Business card front, print collateral, signed-artifact watermarks.</div>
+        <div class="variant__filename">c9d-consulting-wordmark-stacked-light.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--light">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="320" height="213">
+        <text x="60" y="200" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:176px;letter-spacing:-7.04px" fill="#9c4f24">C9D</text>
+        <text x="60" y="320" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:88px;letter-spacing:-3.52px" fill="#1a1612">Consulting</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 5. Mono dark -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-05 · SINGLE-COLOR REVERSED</div>
+      <div class="variant__meta">
+        <div class="variant__title">Single-color mono — bright ink on dark</div>
+        <div class="variant__use">Watermarks, transparent overlays, contexts where the amber accent would compete visually with surrounding content (e.g., appearing next to another amber element on a slide, or in a footer already carrying the primary lockup elsewhere on the page).</div>
+        <div class="variant__filename">c9d-consulting-wordmark-mono-dark.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--dark stage--size-md">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+        <text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px" fill="#f0e6d0">C9D<tspan dx="24">Consulting</tspan></text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 6. Mono light -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-06 · SINGLE-COLOR MONO / LIGHT</div>
+      <div class="variant__meta">
+        <div class="variant__title">Single-color mono — dark ink on light</div>
+        <div class="variant__use">Same as L-05 for light-mode print. Also used for reproductions where two-color printing is constrained (fax, photocopy, single-color letterhead engraving).</div>
+        <div class="variant__filename">c9d-consulting-wordmark-mono-light.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--light stage--size-md">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+        <text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px" fill="#1a1612">C9D<tspan dx="24">Consulting</tspan></text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 7. Endorsed dark -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-07 · ENDORSED LOCKUP</div>
+      <div class="variant__meta">
+        <div class="variant__title">Endorsed lockup with attribution — dark</div>
+        <div class="variant__use">For formal deliverables where the endorsed-house architecture must be visible in the mark itself: engagement letters, signed SOW covers, proposal covers to net-new prospects. The "A practice of Brandon Wilburn." attribution is locked and never modified.</div>
+        <div class="variant__filename">c9d-consulting-endorsed-dark.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="520">
+        <text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px">
+          <tspan fill="#d6743a">C9D</tspan>
+          <tspan fill="#f0e6d0" dx="24">Consulting</tspan>
+        </text>
+        <line x1="40" y1="180" x2="180" y2="180" stroke="#3d362c" stroke-width="1"/>
+        <text x="40" y="220" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:22px;letter-spacing:-0.44px" fill="#8a7e6a">A practice of Brandon Wilburn.</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 8. Endorsed light -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-08 · ENDORSED LOCKUP / LIGHT</div>
+      <div class="variant__meta">
+        <div class="variant__title">Endorsed lockup — light</div>
+        <div class="variant__use">Same as L-07 for printed formal deliverables.</div>
+        <div class="variant__filename">c9d-consulting-endorsed-light.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--light">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="520">
+        <text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px">
+          <tspan fill="#9c4f24">C9D</tspan>
+          <tspan fill="#1a1612" dx="24">Consulting</tspan>
+        </text>
+        <line x1="40" y1="180" x2="180" y2="180" stroke="#a89c82" stroke-width="1"/>
+        <text x="40" y="220" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:22px;letter-spacing:-0.44px" fill="#5a5042">A practice of Brandon Wilburn.</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 9. Wordmark with tagline -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-09 · TAGLINE LOCKUP</div>
+      <div class="variant__meta">
+        <div class="variant__title">Wordmark with primary tagline</div>
+        <div class="variant__use">Reserved use: campaign moments, tradeshow banners, LinkedIn hero images, deck opening slides. Uses Instrument Serif italic for the tagline (the accent face; never used elsewhere in body). Not for daily use — the primary horizontal lockup carries most contexts.</div>
+        <div class="variant__filename">c9d-consulting-with-tagline-dark.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--dark">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="560">
+        <text x="40" y="140" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:128px;letter-spacing:-5.12px">
+          <tspan fill="#d6743a">C9D</tspan>
+          <tspan fill="#f0e6d0" dx="24">Consulting</tspan>
+        </text>
+        <line x1="40" y1="180" x2="180" y2="180" stroke="#3d362c" stroke-width="1"/>
+        <text x="40" y="228" style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:30px" fill="#d6743a">The playbook, not the deck.</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 10. Monogram / stamp -->
+  <section class="variant">
+    <div class="variant__header">
+      <div class="variant__code">L-10 · MONOGRAM STAMP</div>
+      <div class="variant__meta">
+        <div class="variant__title">Monogram — favicon and social avatar</div>
+        <div class="variant__use">The single exception to the "C9D Consulting full form" rule. Justified by the 16/32/48/180px space constraints of favicons, browser tabs, and small avatar contexts. Sodium amber block with reversed "C9D" — reads like a document classification stamp.</div>
+        <div class="variant__filename">c9d-monogram-stamp.svg</div>
+      </div>
+    </div>
+    <div class="stage stage--dark stage--square">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="200" height="200">
+        <rect x="0" y="0" width="512" height="512" fill="#d6743a"/>
+        <text x="256" y="330" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:208px;letter-spacing:-8.32px;text-anchor:middle" fill="#0c0b08">C9D</text>
+      </svg>
+    </div>
+    <div class="sizes">
+      <div>
+        <div class="size-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32"><rect x="0" y="0" width="512" height="512" fill="#d6743a"/><text x="256" y="330" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:208px;letter-spacing:-8.32px;text-anchor:middle" fill="#0c0b08">C9D</text></svg></div>
+        <div class="size-label">32 PX FAVICON</div>
+      </div>
+      <div>
+        <div class="size-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="64" height="64"><rect x="0" y="0" width="512" height="512" fill="#d6743a"/><text x="256" y="330" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:208px;letter-spacing:-8.32px;text-anchor:middle" fill="#0c0b08">C9D</text></svg></div>
+        <div class="size-label">64 PX APPLE TOUCH</div>
+      </div>
+      <div>
+        <div class="size-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="180" height="180"><rect x="0" y="0" width="512" height="512" fill="#d6743a"/><text x="256" y="330" style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:208px;letter-spacing:-8.32px;text-anchor:middle" fill="#0c0b08">C9D</text></svg></div>
+        <div class="size-label">180 PX APP ICON</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="footer__row">
+    <div>
+      <span style="font-family:'Inter Tight',sans-serif;font-weight:400;font-size:18px;letter-spacing:-0.02em;color:var(--ink-bright)">
+        <span style="color:var(--stamp)">C9D</span> Consulting
+      </span>
+      <span style="margin-left:16px;color:var(--ink-mute);font-size:13px">A practice of Brandon Wilburn.</span>
+    </div>
+    <div class="mono">c9d.consulting</div>
+  </div>
+  <div class="footer__closer">Coordinated, not improvised.</div>
+</footer>
+
+</body>
+</html>

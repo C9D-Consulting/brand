@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="C9D Consulting monogram">
+  <title>C9D</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400&amp;display=swap');
+      .c9d-mark { font-family: 'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif; font-weight: 400; font-size: 208px; letter-spacing: -8.32px; fill: #0c0b08; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" fill="#d6743a"/>
+  <text x="256" y="330" class="c9d-mark">C9D</text>
+</svg>

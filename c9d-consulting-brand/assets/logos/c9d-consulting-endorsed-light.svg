@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" role="img" aria-label="C9D Consulting, a practice of Brandon Wilburn">
+  <title>C9D Consulting — a practice of Brandon Wilburn</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&amp;display=swap');
+      .c9d-word { font-family: 'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif; font-weight: 400; font-size: 128px; letter-spacing: -5.12px; }
+      .c9d-attr { font-family: 'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: -0.44px; fill: #5a5042; }
+      .c9d-stamp { fill: #9c4f24; }
+      .c9d-ink { fill: #1a1612; }
+    </style>
+  </defs>
+  <text x="40" y="140" class="c9d-word">
+    <tspan class="c9d-stamp">C9D</tspan>
+    <tspan class="c9d-ink" dx="24">Consulting</tspan>
+  </text>
+  <line x1="40" y1="180" x2="180" y2="180" stroke="#a89c82" stroke-width="1"/>
+  <text x="40" y="220" class="c9d-attr">A practice of Brandon Wilburn.</text>
+</svg>

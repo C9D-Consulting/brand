@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" role="img" aria-label="C9D Consulting">
+  <title>C9D Consulting</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400&amp;display=swap');
+      .c9d-word { font-family: 'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif; font-weight: 400; font-size: 128px; letter-spacing: -5.12px; fill: #f0e6d0; }
+    </style>
+  </defs>
+  <text x="40" y="140" class="c9d-word">C9D<tspan dx="24">Consulting</tspan></text>
+</svg>
