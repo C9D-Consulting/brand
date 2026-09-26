@@ -56,6 +56,14 @@ ICONS = [
  ("partner_programs",   "PP", INK,    RULE),
 ]
 
+# page and template-row icons: same form as the database icons, keyed by the page they sit on
+PAGES = [
+ ("page-origination-program",  "OP", INK, RULE),   # Firm, Origination Program (FILE-NTN-2026-023)
+ ("tpl-origination-agreement", "OA", INK, RULE),   # Templates row, Master Origination Agreement
+ ("tpl-registration-form",     "RF", INK, RULE),   # Templates row, Opportunity Registration Form
+ ("tpl-term-sheet",            "TS", INK, RULE),   # Templates row, Origination Program Term Sheet
+]
+
 # the seven teamspace anchors, as section markers
 ANCHORS = [
  ("anchor-firm",             "01", INK, RULE),
@@ -113,6 +121,10 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     made = []
     for key, code, ink, border in ICONS:
+        p = os.path.join(OUT, "%s.png" % key)
+        render(code, ink, border, p)
+        made.append((key, code, p))
+    for key, code, ink, border in PAGES:
         p = os.path.join(OUT, "%s.png" % key)
         render(code, ink, border, p)
         made.append((key, code, p))
