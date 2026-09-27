@@ -7,3 +7,4 @@ generators/fonts/_src/
 generators/fonts/*-Regular.ttf
 generators/fonts/InstrumentSerif-Italic.ttf
 generators/fonts/c9d-slides-fonts.css
+!generators/fonts/JetBrainsMono-Regular.ttf

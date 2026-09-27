@@ -39,11 +39,15 @@ c9d-consulting-brand/     The brand skill. Strategic foundation and production a
 c9d-brand-guard/          The compliance skill. Verifies artifacts against v2.3.
 
 generators/               Scripts that produce the renders below
+  make_icons.py           Notion database and page icons
+  make_covers.py          Notion teamspace and template covers
+  make_drive_themes.py    Google shared drive banners
   c9d_html_build.py       Markdown with document front matter to a branded HTML page
   c9d_docx_build.py       The same source to a branded Word file (light mode, fonts embedded)
+  c9d_pdf_build.py        The same source to a branded PDF (screen or print mode, fonts embedded)
   c9d_slides_build.py     Markdown with deck front matter to a branded HTML slide deck
   samples/                Sources the generators build from
-  fonts/                  Inter Tight and JetBrains Mono, see FONTS.md
+  fonts/                  Inter Tight and JetBrains Mono, vendored, see FONTS.md
 
 renders/                  Build output. Regenerable. Do not hand edit.
   notion-icons/           Database and page icons for the Notion workspace
@@ -51,9 +55,11 @@ renders/                  Build output. Regenerable. Do not hand edit.
   drive-themes/           Shared drive banners, 1280x144
   html/                   Sample page from c9d_html_build.py
   docx/                   Sample Word file from c9d_docx_build.py
+  pdf/                    Sample PDF from c9d_pdf_build.py
   slides/                 Sample deck and contact sheet from c9d_slides_build.py
 
 docs/PACKAGE.md           The distribution archive's own README
+FONTS.md                  The vendored fonts and their licences
 VERSION                   2.3
 ```
 
@@ -63,9 +69,14 @@ Do not mix versions.
 ## Build
 
 Requires Python 3 with Pillow. The HTML build needs only the standard library. The Word build needs
-`python-docx` and `fonttools`, and fetches its font faces from the Google Fonts repository on first
-run into `generators/fonts/` (git-ignored). The slides build needs only the standard library to
+`python-docx` and `fonttools`. The PDF build needs `weasyprint` and `fonttools`, and its check needs
+`pdffonts` and `pdftotext` from poppler-utils. The slides build needs only the standard library to
 build; its render checks need Playwright for Python with Chromium.
+
+Inter Tight and JetBrains Mono are vendored in `generators/fonts/` and committed. On first run the
+Word and PDF builds fetch the remaining faces they need (Instrument Serif and the static weight
+instances) from the Google Fonts repository into the same folder. Those fetched files are
+git-ignored.
 
 ```
 make            Regenerate every render
@@ -74,14 +85,19 @@ make covers     Notion teamspace and template covers
 make themes     Google shared drive banners
 make html       Sample HTML document page, built and checked
 make docx       Sample Word document, built and checked
-make slides     Sample HTML slide deck, built, rendered and checked
+make pdf        Sample PDF, built and checked
+make slides     Sample HTML slide deck, built, rendered and checked (screenshots go to dist/slides-shots/)
 make dist       Build the installable skills archive into dist/
 make clean      Remove dist/
 ```
 
-The generators read the fonts in `generators/fonts/` and the palette compiled into each script. When
-a token changes, change it in `assets/tokens.json` first, then in the generators, then rebuild. The
-duplication between the two is a known gap and the next thing worth fixing.
+The Word, PDF and slides builds read their palettes, typefaces and attribution line from
+`c9d-consulting-brand/assets/tokens.json`. When run outside this repository they take `--tokens PATH`
+or `$C9D_TOKENS`, or fetch the file from GitHub, and they stop rather than fall back to a built-in
+palette. The HTML build (`c9d_html_build.py`) and the three image generators (`make_icons.py`,
+`make_covers.py`, `make_drive_themes.py`) still have the palette written into the script. When a
+token changes, change it in `assets/tokens.json` first, then in those four scripts, then rebuild.
+Moving those four onto `tokens.json` is a known gap and the next thing worth fixing.
 
 ## Installing the skills
 
