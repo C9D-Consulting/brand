@@ -1,8 +1,8 @@
 PY ?= python3
 
-.PHONY: all icons covers themes html docx dist clean
+.PHONY: all icons covers themes html docx slides dist clean
 
-all: icons covers themes html docx
+all: icons covers themes html docx slides
 
 icons:
 	$(PY) generators/make_icons.py
@@ -21,6 +21,11 @@ html:
 docx:
 	@mkdir -p renders/docx
 	$(PY) generators/c9d_docx_build.py generators/samples/html-sample.md renders/docx/sample.docx --check
+
+slides:
+	@mkdir -p renders/slides dist/slides-shots
+	$(PY) generators/c9d_slides_build.py generators/samples/slides-sample.md renders/slides/sample.html \
+		--check dist/slides-shots --sheet renders/slides/contact-sheet.png
 
 dist:
 	@mkdir -p dist

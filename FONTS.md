@@ -39,4 +39,10 @@ Those instanced files are git-ignored, so the vendored set above stays the only 
 here. `c9d_pdf_build.py` uses the same cache and file names. `c9d-operating-stack` has carried its
 own copy of the Word generator; the file in `generators/` is the source of record.
 
+The slides build (`generators/c9d_slides_build.py`) does not use the vendored files. A deck is a
+single HTML file that has to render the same on any machine, so the script fetches all three faces
+from Google Fonts on first run, keeps the latin and latin-ext subsets, and embeds them as base64
+`@font-face` rules. The cache, `generators/fonts/c9d-slides-fonts.css`, is build output and is not
+committed.
+
 `c9d-consulting-brand/references/visual-system.md` is the authority on all three.

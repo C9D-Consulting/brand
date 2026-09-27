@@ -59,7 +59,7 @@ A 0.5pt `--rule` hairline runs below the top chrome.
 A horizontal strip across the bottom, 0.4 inch tall. From left to right:
 
 - Left: C9D Consulting wordmark, 12pt. Inter Tight 400 with "C9D" in `--stamp` color and "Consulting" in `--ink`.
-- Center: "A practice of Brandon Wilburn." Inter Tight 9pt, `--ink-mute`.
+- Center: "A practice of Brandon Wilburn" (no terminal period; `naming.founder.attribution` in `tokens.json`). Inter Tight 9pt, `--ink-mute`.
 - Right: c9d.consulting in JetBrains Mono 9pt, `--ink-mute`.
 
 A 0.5pt `--rule` hairline runs above the bottom chrome.
