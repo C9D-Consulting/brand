@@ -39,12 +39,15 @@ c9d-consulting-brand/     The brand skill. Strategic foundation and production a
 c9d-brand-guard/          The compliance skill. Verifies artifacts against v2.3.
 
 generators/               Scripts that produce the renders below
+  c9d_html_build.py       Markdown with document front matter to a branded HTML page
+  samples/                Sources the generators build from
   fonts/                  Inter Tight and JetBrains Mono, see FONTS.md
 
 renders/                  Build output. Regenerable. Do not hand edit.
   notion-icons/           Database and page icons for the Notion workspace
   notion-covers/          Teamspace and template covers
   drive-themes/           Shared drive banners, 1280x144
+  html/                   Sample page from c9d_html_build.py
 
 docs/PACKAGE.md           The distribution archive's own README
 VERSION                   2.3
@@ -55,13 +58,14 @@ Do not mix versions.
 
 ## Build
 
-Requires Python 3 with Pillow.
+Requires Python 3 with Pillow. The HTML build needs only the standard library.
 
 ```
 make            Regenerate every render
 make icons      Notion database and page icons
 make covers     Notion teamspace and template covers
 make themes     Google shared drive banners
+make html       Sample HTML document page, built and checked
 make dist       Build the installable skills archive into dist/
 make clean      Remove dist/
 ```

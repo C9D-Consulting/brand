@@ -1,8 +1,8 @@
 PY ?= python3
 
-.PHONY: all icons covers themes dist clean
+.PHONY: all icons covers themes html dist clean
 
-all: icons covers themes
+all: icons covers themes html
 
 icons:
 	$(PY) generators/make_icons.py
@@ -12,6 +12,11 @@ covers:
 
 themes:
 	$(PY) generators/make_drive_themes.py
+
+html:
+	@mkdir -p renders/html
+	$(PY) generators/c9d_html_build.py build generators/samples/html-sample.md renders/html/sample.html
+	$(PY) generators/c9d_html_build.py check generators/samples/html-sample.md renders/html/sample.html
 
 dist:
 	@mkdir -p dist
