@@ -40,6 +40,7 @@ c9d-brand-guard/          The compliance skill. Verifies artifacts against v2.3.
 
 generators/               Scripts that produce the renders below
   c9d_html_build.py       Markdown with document front matter to a branded HTML page
+  c9d_docx_build.py       The same source to a branded Word file (light mode, fonts embedded)
   samples/                Sources the generators build from
   fonts/                  Inter Tight and JetBrains Mono, see FONTS.md
 
@@ -48,6 +49,7 @@ renders/                  Build output. Regenerable. Do not hand edit.
   notion-covers/          Teamspace and template covers
   drive-themes/           Shared drive banners, 1280x144
   html/                   Sample page from c9d_html_build.py
+  docx/                   Sample Word file from c9d_docx_build.py
 
 docs/PACKAGE.md           The distribution archive's own README
 VERSION                   2.3
@@ -58,7 +60,9 @@ Do not mix versions.
 
 ## Build
 
-Requires Python 3 with Pillow. The HTML build needs only the standard library.
+Requires Python 3 with Pillow. The HTML build needs only the standard library. The Word build needs
+`python-docx` and `fonttools`, and fetches its font faces from the Google Fonts repository on first
+run into `generators/fonts/` (git-ignored).
 
 ```
 make            Regenerate every render
@@ -66,6 +70,7 @@ make icons      Notion database and page icons
 make covers     Notion teamspace and template covers
 make themes     Google shared drive banners
 make html       Sample HTML document page, built and checked
+make docx       Sample Word document, built and checked
 make dist       Build the installable skills archive into dist/
 make clean      Remove dist/
 ```

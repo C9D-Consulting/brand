@@ -1,8 +1,8 @@
 PY ?= python3
 
-.PHONY: all icons covers themes html dist clean
+.PHONY: all icons covers themes html docx dist clean
 
-all: icons covers themes html
+all: icons covers themes html docx
 
 icons:
 	$(PY) generators/make_icons.py
@@ -17,6 +17,10 @@ html:
 	@mkdir -p renders/html
 	$(PY) generators/c9d_html_build.py build generators/samples/html-sample.md renders/html/sample.html
 	$(PY) generators/c9d_html_build.py check generators/samples/html-sample.md renders/html/sample.html
+
+docx:
+	@mkdir -p renders/docx
+	$(PY) generators/c9d_docx_build.py generators/samples/html-sample.md renders/docx/sample.docx --check
 
 dist:
 	@mkdir -p dist

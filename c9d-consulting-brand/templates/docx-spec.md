@@ -9,7 +9,7 @@
 
 The Dossier system applied to Word documents. Reports, memos, proposals, engagement letters, findings documents, and the playbook artifacts the practice ships with every engagement.
 
-When creating a C9D Consulting Word document, use the generic `docx` skill for mechanics (python-docx, styles, headers, footers) and layer this spec on top for the brand decisions.
+C9D Consulting Word documents are built by `generators/c9d_docx_build.py` from markdown with document front matter, the same source the PDF and HTML builds read. Do not hand-build them with the generic `docx` skill; the generator applies this spec. Decisions marked **[decided 2026.09.26]** were made by Brandon while fixing rendered documents and are implemented in layout v1.4 of the generator; they are locked for Word even though the rest of this file is still a proposal.
 
 ---
 
@@ -32,13 +32,15 @@ Six document types cover every standard deliverable. Resist creating new types; 
 
 **Page size:** US Letter (8.5 × 11 inches).
 
-**Margins:**
-- Top: 1.0 inch
+**Margins:** **[decided 2026.09.26]**
+- Top: 1.3 inch (clear air of about 0.4 inch between the header hairline and the first line of body)
 - Bottom: 1.0 inch
-- Left: 1.25 inch
+- Left: 1.0 inch
 - Right: 1.0 inch
 - Header: 0.5 inch
 - Footer: 0.5 inch
+
+Body text, headings, lists, tables and rules all run the full 6.5 inch text block. There is no right-hand indent and no narrowed measure. The earlier 1.25 / 1.0 inch margins with body held to a 4.75 inch measure left an empty strip down the right of every page and were judged off-brand for print.
 
 **Background:** White (this is a print-mode artifact). Use the light-mode token map from `references/visual-system.md` for color.
 
@@ -52,7 +54,9 @@ Three-cell row, separated by 0.5pt `--rule-light` hairlines. Inter Tight 9pt for
 
 - Left cell: file ID in JetBrains Mono. Format: `FILE-E01-2026-014`.
 - Center cell: classification in Inter Tight uppercase 8pt with letter-spacing 0.18em, color `--stamp-light`. Examples: `OPERATING EVIDENCE`, `CLIENT CONFIDENTIAL`, `DRAFT — NOT FOR DISTRIBUTION`.
-- Right cell: section marker and page number in JetBrains Mono. Format: `§ 03 · 14 / 42`.
+- Right cell: section marker and page number in JetBrains Mono. Format: `§ 03 · 14 / 42`. The page number renders at the same 8pt as the marker (the field is written in separately formatted runs).
+
+Cells are 2.0 / 2.5 / 2.0 inches with zero table cell margins, so the file ID starts exactly on the left margin.
 
 Below the row: a 0.5pt `--rule-light` hairline spanning the full content width.
 
@@ -66,13 +70,15 @@ Three-cell row, separated by 0.5pt `--rule-light` hairlines. Inter Tight 9pt.
 - Center cell: "A practice of Brandon Wilburn" (no terminal period; `naming.founder.attribution` in `tokens.json`) in Inter Tight 9pt `--ink-mute-light`.
 - Right cell: "c9d.consulting" in JetBrains Mono 9pt `--ink-mute-light`.
 
+Same 2.0 / 2.5 / 2.0 inch cells as the header, so the attribution stays on one line.
+
 Above the row: a 0.5pt `--rule-light` hairline spanning the full content width.
 
 ---
 
 ## Cover page (page 1 of every document type)
 
-The cover has no header or footer. It carries the document's full identity.
+The cover has no header or footer. It carries the document's full identity. **[decided 2026.09.26]** The cover is always exactly one page, including in previewers that ignore embedded fonts and substitute a wider face: the file ID starts at the top margin, 48pt sits above the title and above the metadata table, and the metadata rows are kept together so the table never splits onto page 2.
 
 **Composition top-to-bottom:**
 
@@ -94,7 +100,7 @@ The cover has no header or footer. It carries the document's full identity.
 | `CLASSIFICATION` | See classification table below |
 | `VERSION` | `v1.0 · 2026.06.17` |
 
-- Bottom of page (around 9.5 inches from top): the wordmark and attribution block. C9D Consulting wordmark in Inter Tight 16pt with "C9D" in `--stamp-light` and "Consulting" in `--ink-bright-light`. Below: "A practice of Brandon Wilburn." in Inter Tight 10pt `--ink-mute-light`.
+- Bottom of page (around 9.5 inches from top): the wordmark and attribution block. C9D Consulting wordmark in Inter Tight 16pt with "C9D" in `--stamp-light` and "Consulting" in `--ink-bright-light`. Below: "A practice of Brandon Wilburn" (no terminal period) in Inter Tight 10pt `--ink-mute-light`. Below that: the closing signature in JetBrains Mono 8pt `--stamp-dim-light` (see Closing signature).
 
 ---
 
@@ -137,7 +143,7 @@ Every document carries one classification in the header and on the cover. Five v
 
 ### Maximum measure
 
-Body text never exceeds 75 characters per line at 11pt. If the page geometry produces longer lines, narrow the column or increase margins.
+**[decided 2026.09.26]** Word documents use the full page width at standard margins. The 65-character measure (`spatial.measure` in `tokens.json`) is a screen rule and does not apply to Word; at 11pt across 6.5 inches, body lines run about 95 characters. Do not narrow the column or widen the margins to hold a measure.
 
 ### Section structure
 
@@ -145,7 +151,7 @@ Every major section opens with:
 
 1. An eyebrow in H4 style ("FINDING 01", "THE PLAYBOOK", "DECISION POINT").
 2. The H1 section title.
-3. A 0.5pt `--rule-bright-light` horizontal rule spanning the column.
+3. A 0.5pt `--rule-bright-light` horizontal rule spanning the column, set close under the title: no space after the title, and the paragraph carrying the rule is an exact 6pt line. **[decided 2026.09.26]**
 4. A 12pt vertical space.
 5. The body content.
 
@@ -166,6 +172,12 @@ Tables are first-class in The Dossier. They appear in every engagement deliverab
 - Row separator: 0.5pt `--rule-light` hairline.
 - No vertical separators.
 - No alternating row backgrounds.
+
+**Cell geometry:** **[decided 2026.09.26]**
+- Left and right padding 0.1 inch in every cell, including the first and last column, so text never sits on the fill edge.
+- Line height 1.15 inside cells. Top padding 5pt, bottom padding 2pt: the line box already carries the descent, so this measures about 7pt of air above the text and 7pt below. Equal top and bottom padding reads bottom-heavy.
+- Header cells centred vertically; body cells top-aligned, so a label stays on the first line of a multi-line value.
+- The header fill and row rules sit exactly on the 1.0 inch margins, flush with the section rules. Set the padding both per cell and as the table default, with the table indent equal to the left padding; LibreOffice otherwise shifts the table 0.025 inch off the margin.
 
 **Status cells:**
 Use the color system for status:
@@ -211,6 +223,17 @@ Code, command-line examples, structured data:
 - Font: JetBrains Mono 10pt weight 500 color `--ink-light`.
 - Line height: 1.6.
 - Caption below: JetBrains Mono 9pt color `--ink-mute-light` uppercase letter-spacing 0.18em.
+
+---
+
+## Closing signature
+
+**[decided 2026.09.26]** Every Word document carries the locked closing line (`naming.tagline` in `tokens.json`, "Coordinated, not improvised.") as the closing signature `→ COORDINATED, NOT IMPROVISED`, in JetBrains Mono caps with 0.18em tracking, in two places:
+
+- At the end of the body, after a 0.5pt `--rule-light` hairline, 9pt weight 600 in `--stamp-light`, kept on the same page as the last body paragraph.
+- On the cover, as the third footer line under the attribution, 8pt in `--stamp-dim-light`.
+
+It is a closing line, not a tagline: never welded to the wordmark, never reworded, and never typed into the source; the generator places it.
 
 ---
 

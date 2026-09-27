@@ -26,12 +26,17 @@ from the same release.
 
 Inter Tight is the display and body face, weights 200 to 450, with negative tracking, and never bold
 at display size. Instrument Serif italic is the accent face and is loaded from the web rather than
-vendored, because nothing in this repository renders it. JetBrains Mono is chrome only: uppercase,
-letter spacing +0.18em, used for file codes and section markers and never for body text.
+vendored, because only the Word and PDF generators embed it and they fetch it on first run.
+JetBrains Mono is chrome only: uppercase, letter spacing +0.18em, used for file codes and section
+markers and never for body text.
 
-Consumers outside this repository may need more. The Word generator in `c9d-operating-stack`
-embeds seven faces, including four static Inter Tight weights and Instrument Serif italic, because
-a Word file that names a font it cannot supply is not a branded document. It vendors its own copies
-rather than reaching in here.
+The Word and PDF generators need more. `generators/c9d_docx_build.py` embeds up to seven faces,
+four static Inter Tight weights, two JetBrains Mono weights and Instrument Serif italic, because a
+Word file that names a font it cannot supply is not a branded document. On first run it fetches the
+upstream variable fonts from the Google Fonts repository, instances the static weights into
+`generators/fonts/` beside the vendored files, and subsets each face into the document it builds.
+Those instanced files are git-ignored, so the vendored set above stays the only fonts committed
+here. `c9d_pdf_build.py` uses the same cache and file names. `c9d-operating-stack` has carried its
+own copy of the Word generator; the file in `generators/` is the source of record.
 
 `c9d-consulting-brand/references/visual-system.md` is the authority on all three.
