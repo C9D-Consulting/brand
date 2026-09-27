@@ -245,7 +245,7 @@ Every C9D Consulting artifact carries a specific signature pattern at the end.
 ### Signature elements
 
 1. Wordmark or endorsed lockup.
-2. Attribution: "A practice of Brandon Wilburn." (with terminal period).
+2. Attribution: "A practice of Brandon Wilburn" exactly, with no terminal period, as `naming.founder.attribution` in `tokens.json` holds it.
 3. If a signing surface (letter, memo, client-facing deliverable): signer name, role, date.
 4. Closing line where appropriate: "Coordinated, not improvised."
 

@@ -63,7 +63,7 @@ Below the row: a 0.5pt `--rule-light` hairline spanning the full content width.
 Three-cell row, separated by 0.5pt `--rule-light` hairlines. Inter Tight 9pt.
 
 - Left cell: "C9D Consulting" in Inter Tight 10pt. "C9D" in `--stamp-light`, "Consulting" in `--ink-light`.
-- Center cell: "A practice of Brandon Wilburn." in Inter Tight 9pt `--ink-mute-light`.
+- Center cell: "A practice of Brandon Wilburn" (no terminal period; `naming.founder.attribution` in `tokens.json`) in Inter Tight 9pt `--ink-mute-light`.
 - Right cell: "c9d.consulting" in JetBrains Mono 9pt `--ink-mute-light`.
 
 Above the row: a 0.5pt `--rule-light` hairline spanning the full content width.

@@ -2,3 +2,7 @@ dist/
 __pycache__/
 *.pyc
 .DS_Store
+generators/tokens.json
+generators/fonts/_src/
+generators/fonts/*-Regular.ttf
+generators/fonts/InstrumentSerif-Italic.ttf

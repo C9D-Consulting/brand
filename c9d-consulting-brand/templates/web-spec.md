@@ -473,7 +473,7 @@ The site has minimal CTAs. The primary CTA is restrained, not marketing-loud.
 <footer class="site-footer">
   <div class="site-footer__brand">
     <span class="wordmark"><span class="wordmark__c9d">C9D</span> Consulting</span>
-    <span class="site-footer__attribution">A practice of Brandon Wilburn.</span>
+    <span class="site-footer__attribution">A practice of Brandon Wilburn</span>
   </div>
   <div class="site-footer__meta">
     <span class="mono">c9d.consulting</span>
