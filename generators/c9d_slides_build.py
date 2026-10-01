@@ -35,7 +35,7 @@ TOKENS_URL = ("https://raw.githubusercontent.com/C9D-Consulting/brand/main/"
 BRAND = {}  # filled by load_tokens(): css variables per mode, attribution, families
 
 REQUIRED = ["file_id", "classification", "title", "subtitle", "prepared_for", "prepared_by", "version"]
-CLASSIFICATIONS = {"OPERATING EVIDENCE", "CLIENT CONFIDENTIAL", "INTERNAL DRAFT", "REFUSED"}
+CLASSIFICATIONS = {"OPERATING EVIDENCE", "REFERENCE DESIGN", "CLIENT CONFIDENTIAL", "INTERNAL DRAFT", "REFUSED"}
 DEFAULT_CLOSE = "Operator, not observer."
 CLOSER = "Coordinated, not improvised."
 

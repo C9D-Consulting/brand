@@ -106,11 +106,12 @@ The cover has no header or footer. It carries the document's full identity. **[d
 
 ## Classification system
 
-Every document carries one classification in the header and on the cover. Five values.
+Every document carries one classification in the header and on the cover. Six values.
 
 | Classification | Use |
 |---|---|
 | `OPERATING EVIDENCE` | Default for findings documents and playbooks delivered to clients |
+| `REFERENCE DESIGN` | Designs and patterns published before an engagement has produced evidence for them. Rendered in `--stamp`, never red. |
 | `CLIENT CONFIDENTIAL` | Drafts and working documents shared with the client during the engagement |
 | `INTERNAL DRAFT` | Working documents not yet shared with the client |
 | `SIGNED — ENGAGEMENT LETTER` | Executed legal engagement letters |
