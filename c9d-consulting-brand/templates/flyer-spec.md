@@ -36,7 +36,7 @@ In split and cards bands the `##` line is a structural label and is not rendered
 
 ## Inline
 
-`**bold**` ink bright SemiBold, `*italic*` Instrument Serif, `` `mono` `` sodium amber mono. Reserve mono for measured figures, since amber indexes the proof.
+`**bold**` ink bright SemiBold, `*italic*` Instrument Serif, `` `mono` `` sodium amber mono, `[text](https://...)` amber links. Reserve mono for measured figures, since amber indexes the proof.
 
 ## Chrome
 

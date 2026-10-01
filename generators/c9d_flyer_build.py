@@ -18,20 +18,23 @@ Body: `## EYEBROW · Title` opens a band. The band's layout follows from its con
   cards   #### `ID · Title` blocks, each with paragraphs, rendered as side-by-side cards
 In split and cards bands the ## line is a structural label and is not rendered.
 Inline: **bold**, *italic* (Instrument Serif), `mono` (renders as amber signal, use it for
-measured figures only).
+measured figures only), [links](https://...) in amber.
 """
 import re, sys, os, html, subprocess, argparse
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import c9d_pdf_build as b
 
-VERSION = "0.1"
+VERSION = "0.2"
 E = html.escape
 
 def inl(text):
     out = []
-    for kind, t in b.inline_runs(text):
-        t = E(t, quote=False)
+    for kind, raw in b.inline_runs(text):
+        t = E(raw, quote=False)
+        if kind == "link":
+            label, url = b.LINK_RE.match(raw).groups()
+            out.append(f'<a class="sig" href="{E(url)}">{E(label, quote=False)}</a>'); continue
         out.append({"bold": f"<b>{t}</b>", "italic": f"<em>{t}</em>",
                     "mono": f'<span class="sig">{t}</span>',
                     "placeholder": f'<span class="sig">{t}</span>'}.get(kind, t))
@@ -137,6 +140,7 @@ h1 {{ font-weight: 300; font-size: 28pt; line-height: 1.03; letter-spacing: -0.0
 em {{ font-family: 'Instrument Serif'; font-style: italic; color: {P['ink_bright']}; font-size: 1.12em; }}
 b {{ font-weight: 600; color: {P['ink_bright']}; }}
 .sig {{ color: {P['stamp']}; font-family: 'JetBrains Mono'; font-weight: 500; }}
+a.sig {{ font-family: 'Inter Tight'; font-weight: 400; text-decoration: none; }}
 .rule {{ border-top: 1px solid {P['rule']}; }}
 .cols {{ display: flex; gap: 22pt; padding: 8pt 0; }}
 .cols.tight {{ padding-top: 0; }}

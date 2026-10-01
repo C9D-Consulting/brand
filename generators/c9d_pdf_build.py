@@ -18,11 +18,12 @@ Fonts:  fetched from the Google Fonts repository on first run into ./fonts besid
 Front matter keys: file_id, classification, title, subtitle, prepared_for, prepared_by,
 version, section_marker. Body: # title, ## "EYEBROW · Title" sections (a bare number
 renders as SECTION 01), ### and #### subheads, GFM tables, - and 1. lists, **bold**,
-*italic*, `mono`, and [bracketed placeholders], which render in stamp amber.
+*italic*, `mono`, [links](https://...) in stamp amber, and [bracketed placeholders],
+which render in stamp amber.
 """
 import re, sys, os, html, shutil, subprocess, statistics, collections
 
-VERSION = "1.2"
+VERSION = "1.3"
 
 # ---- tokens: read from the brand repo's tokens.json, never compiled in -------------------
 # Resolution order: --tokens PATH, $C9D_TOKENS, the repo copy when this script runs from the
@@ -124,7 +125,8 @@ def parse_front_matter(text):
         text = text[end + 4:]
     return meta, text
 
-INLINE_RE = re.compile(r"(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\])")
+INLINE_RE = re.compile(r"(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)\s]+\)|\[[^\]]+\])")
+LINK_RE = re.compile(r"^\[([^\]]+)\]\(([^)\s]+)\)$")
 
 def inline_runs(text):
     for part in INLINE_RE.split(text):
@@ -133,6 +135,7 @@ def inline_runs(text):
         if part.startswith("**"): yield "bold", part[2:-2]
         elif part.startswith("*"): yield "italic", part[1:-1]
         elif part.startswith("`"): yield "mono", part[1:-1]
+        elif LINK_RE.match(part): yield "link", part
         elif part.startswith("[") and part.endswith("]") and not part.startswith("[["):
             yield "placeholder", part
         else: yield "body", part
@@ -177,11 +180,14 @@ E = html.escape
 
 def inline_html(text):
     out = []
-    for kind, t in inline_runs(text):
-        t = E(t, quote=False)
+    for kind, raw in inline_runs(text):
+        t = E(raw, quote=False)
         if kind == "bold": out.append(f"<strong>{t}</strong>")
         elif kind == "italic": out.append(f"<em>{t}</em>")
         elif kind == "mono": out.append(f"<code>{t}</code>")
+        elif kind == "link":
+            label, url = LINK_RE.match(raw).groups()
+            out.append(f'<a href="{E(url)}">{E(label, quote=False)}</a>')
         elif kind == "placeholder": out.append(f'<span class="ph">{t}</span>')
         else: out.append(t)
     return "".join(out)
@@ -291,6 +297,7 @@ body {{ margin: 0; font: 400 13.5pt/1.6 "Inter Tight"; color: {t['ink']};
 strong {{ font-weight: 600; color: {t['ink_bright']}; }}
 em {{ font-family: "Instrument Serif"; font-style: italic; font-size: 1.04em; color: {t['ink_bright']}; }}
 code {{ font: 500 .92em "JetBrains Mono"; color: {t["ink"]}; white-space: nowrap; }}
+a {{ color: {t["stamp"]}; text-decoration: none; }}
 .ph {{ color: {t['stamp']}; }}
 .c9d {{ color: {t['stamp']}; }}
 
@@ -372,7 +379,7 @@ def lint(meta, body):
     if "\u2014" in full: issues.append(f"em-dash x{full.count(chr(0x2014))}")
     bare = re.findall(r"\bC9D\b(?! Consulting)", full)
     if bare: issues.append(f"bare 'C9D' x{len(bare)}")
-    ph = re.findall(r"(?<!\[)\[[^\]\[]+\](?!\])", body)
+    ph = re.findall(r"(?<!\[)\[[^\]\[]+\](?![\]\(])", body)
     if ph: issues.append(f"unresolved [placeholders] x{len(ph)} (fine for a template, not for a delivered file)")
     if re.search(r"^---\s*$", body, re.M): issues.append("'---' rule in body (strip it)")
     if re.search(r"<[a-zA-Z/][^>]*>", body): issues.append("HTML in body")
@@ -383,6 +390,7 @@ def lint(meta, body):
 # ---- verification ------------------------------------------------------------------------
 def md_words(body):
     body = re.sub(r"^#+\s*", "", body, flags=re.M)
+    body = re.sub(r"\[([^\]]+)\]\([^)\s]+\)", r"\1", body)  # link targets are not page text
     body = re.sub(r"^\|?\s*:?-{3,}.*$", "", body, flags=re.M)
     body = re.sub(r"[*`|]", " ", body)
     return [w.lower() for w in re.findall(r"[A-Za-z0-9][A-Za-z0-9'’.,:;%$&/()\-]*", body)]

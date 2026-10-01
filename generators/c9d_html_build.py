@@ -8,29 +8,77 @@ Same source dialect as c9d_docx_build.py, so one .md builds both files.
   python3 c9d_html_build.py build  source.md output.html --artifact # fragment for the Artifact tool
   python3 c9d_html_build.py check  source.md output.html [--draft]  # parity + voice checks
 
+Tokens: the dark, light and print palettes, the attribution line and the closing line are
+read from the brand repo's tokens.json (--tokens PATH, $C9D_TOKENS, the repo copy, ./tokens.json
+beside this script, or fetched from github.com/C9D-Consulting/brand; --refresh-tokens re-fetches).
+Nothing is compiled in.
+
 No dependencies beyond the Python 3 standard library.
 """
 import html
+import os
 import re
 import sys
 from collections import Counter
 from datetime import date
 
-VERSION = "1.2"
+VERSION = "1.3"
 
 REQUIRED_KEYS = ["file_id", "classification", "title", "subtitle",
                  "prepared_for", "prepared_by", "version", "section_marker"]
 CLASSIFICATIONS = {"OPERATING EVIDENCE", "REFERENCE DESIGN", "CLIENT CONFIDENTIAL", "INTERNAL DRAFT", "REFUSED"}
+
+# ---- tokens: read from the brand repo's tokens.json, never compiled in -------------------
+# Same resolution order as c9d_pdf_build.py and c9d_docx_build.py: --tokens PATH, $C9D_TOKENS,
+# the repo copy when run from the brand repo's generators/ folder, tokens.json beside this
+# script, then the source of record on GitHub (cached beside this script).
+TOKENS_URL = ("https://raw.githubusercontent.com/C9D-Consulting/brand/main/"
+              "c9d-consulting-brand/assets/tokens.json")
+HERE = os.path.dirname(os.path.abspath(__file__))
+BRAND = {}
+TOKEN_ORDER = [("ground", "bg"), ("ground", "bg-2"), ("ground", "bg-3"), ("ground", "paper"),
+               ("rule", "rule"), ("rule", "rule-bright"),
+               ("ink", "ink-bright"), ("ink", "ink"), ("ink", "ink-mute"), ("ink", "ink-dim"),
+               ("signal", "stamp"), ("signal", "stamp-dim"), ("crit", "classified")]
+
+def load_tokens(path=None, refresh=False):
+    import json, urllib.request
+    repo = os.path.join(HERE, "..", "c9d-consulting-brand", "assets", "tokens.json")
+    cands = [path, os.environ.get("C9D_TOKENS"), repo, os.path.join(HERE, "tokens.json")]
+    src = next((c for c in cands if c and os.path.exists(c)), None)
+    cache = os.path.join(HERE, "tokens.json")
+    if src is None or refresh:
+        try:
+            data = urllib.request.urlopen(TOKENS_URL, timeout=20).read()
+            open(cache, "wb").write(data); src = cache
+        except Exception as e:
+            if src is None:
+                sys.exit(f"tokens.json not found and could not be fetched ({e}). "
+                         "Pass --tokens path/to/c9d-consulting-brand/assets/tokens.json.")
+    d = json.load(open(src, encoding="utf8"))
+    pal = lambda mode: {k: d["color"][mode][g][k]["value"] for g, k in TOKEN_ORDER}
+    BRAND.update(source=src, dark=pal("dark"), light=pal("light"),
+                 attribution=d["naming"]["founder"]["attribution"],
+                 closing=d["naming"]["tagline"]["value"])
+    return BRAND
+
+def css_vars(p):
+    return "".join(f"--{k}:{v};" for k, v in p.items())
+
+def render_css():
+    """CSS with the three palettes filled from tokens.json. Print is ink on white paper,
+    as in the PDF build: only the page ground and the paper token differ from light mode."""
+    prnt = dict(BRAND["light"], bg="#ffffff", paper="#f8f4eb")
+    return (CSS.replace("/*@DARK@*/", css_vars(BRAND["dark"]))
+               .replace("/*@LIGHT@*/", css_vars(BRAND["light"]))
+               .replace("/*@PRINT@*/", css_vars(prnt)))
 
 FONTS_HREF = ("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..600"
               "&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400..600&display=swap")
 
 CSS = r"""
 :root{
-  --bg:#0c0b08;--bg-2:#131210;--bg-3:#1a1815;--paper:#161410;
-  --rule:#2a2620;--rule-bright:#3d362c;
-  --ink-bright:#f0e6d0;--ink:#d8cdb8;--ink-mute:#8a7e6a;--ink-dim:#5a5042;
-  --stamp:#d6743a;--stamp-dim:#8a4824;--classified:#c0392b;
+  /*@DARK@*/
   --space-1:4px;--space-2:8px;--space-3:16px;--space-4:24px;--space-5:32px;
   --space-6:48px;--space-7:64px;--space-8:96px;--space-9:128px;
   --font-display:'Inter Tight',Inter,-apple-system,system-ui,sans-serif;
@@ -40,10 +88,7 @@ CSS = r"""
   color-scheme:dark;
 }
 :root[data-mode="light"],:root[data-theme="light"],.light-mode{
-  --bg:#f5f1e8;--bg-2:#ebe5d6;--bg-3:#e0d8c5;--paper:#ede7d4;
-  --rule:#c8bda5;--rule-bright:#a89c82;
-  --ink-bright:#1a1612;--ink:#2e2820;--ink-mute:#5a5042;--ink-dim:#8a7e6a;
-  --stamp:#9c4f24;--stamp-dim:#6b3818;--classified:#8b2a20;
+  /*@LIGHT@*/
   color-scheme:light;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -162,10 +207,7 @@ td.nw{white-space:nowrap}
 @media print{
   @page{size:Letter;margin:1.3in 1in 1in}
   :root{
-    --bg:#ffffff;--bg-2:#ebe5d6;--bg-3:#e0d8c5;--paper:#f8f4eb;
-    --rule:#c8bda5;--rule-bright:#a89c82;
-    --ink-bright:#1a1612;--ink:#2e2820;--ink-mute:#5a5042;--ink-dim:#8a7e6a;
-    --stamp:#9c4f24;--stamp-dim:#6b3818;--classified:#8b2a20;color-scheme:light;
+    /*@PRINT@*/color-scheme:light;
   }
   html,body{background:#fff!important}
   body{font-size:11pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -398,9 +440,9 @@ def render(fm, body_md, artifact=False):
   </main>
 </div>
 <footer class="foot">
-  <div class="foot__brand">{wordmark()}<span class="foot__attr">A practice of Brandon Wilburn.</span></div>
+  <div class="foot__brand">{wordmark()}<span class="foot__attr">{html.escape(BRAND["attribution"])}</span></div>
   <div class="foot__meta"><span class="mono">c9d.consulting</span><span class="mono">© {year} C9D Consulting LLC</span><span class="mono">{esc('file_id')} · {esc('version')}</span></div>
-  <div class="foot__closer">Coordinated, not improvised.</div>
+  <div class="foot__closer">{html.escape(BRAND["closing"])}</div>
 </footer>
 </div>
 </div>"""
@@ -414,7 +456,7 @@ def render(fm, body_md, artifact=False):
     head_bits = (f"<title>{html.escape(title)}</title>\n"
                  f'<meta name="description" content="{desc}">\n'
                  f'<meta name="generator" content="c9d_html_build {VERSION}">\n'
-                 f"{fonts}\n<style>{CSS}</style>")
+                 f"{fonts}\n<style>{render_css()}</style>")
     if artifact:
         # Artifact tool wraps the skeleton; no doctype/html/head/body here.
         return f"{head_bits}\n{mode_script}\n{page}\n"
@@ -491,8 +533,11 @@ def check(src, out_path, draft=False):
     brackets = re.findall(r"(?<!\])\[[^\]]+\](?!\()", body)
     if brackets and not draft:
         problems.append(f"placeholders: {len(brackets)} unresolved [bracket](s), e.g. {brackets[0]}")
-    if "A practice of Brandon Wilburn" not in h:
+    attr = BRAND["attribution"]
+    if attr not in h:
         problems.append("chrome: attribution line missing")
+    elif re.search(re.escape(attr) + r"[.,;:]", h):
+        problems.append("chrome: attribution carries trailing punctuation")
     if re.search(r"https?://(?!fonts\.googleapis\.com|fonts\.gstatic\.com)[^\"'\s)]+\.(js|css)\b", h):
         problems.append("self-contained: external script or stylesheet other than Google Fonts")
     title_lines = len(fm["title"])
@@ -514,6 +559,8 @@ def main(argv):
         print(__doc__)
         return 2
     cmd, src, dst = argv[1], argv[2], argv[3]
+    tok = argv[argv.index("--tokens") + 1] if "--tokens" in argv else None
+    load_tokens(tok, refresh="--refresh-tokens" in argv)
     if cmd == "check":
         return check(src, dst, draft="--draft" in argv)
     fm, body = parse_front_matter(open(src, encoding="utf-8").read())
