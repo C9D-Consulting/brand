@@ -42,6 +42,7 @@ generators/               Scripts that produce the renders below
   c9d_html_build.py       Markdown with document front matter to a branded HTML page
   c9d_docx_build.py       The same source to a branded Word file (light mode, fonts embedded)
   c9d_slides_build.py     Markdown with deck front matter to a branded HTML slide deck
+  c9d_flyer_build.py      Markdown with document front matter to a one-page flyer PDF (proposed layout)
   samples/                Sources the generators build from
   fonts/                  Inter Tight and JetBrains Mono, see FONTS.md
 
@@ -52,6 +53,7 @@ renders/                  Build output. Regenerable. Do not hand edit.
   html/                   Sample page from c9d_html_build.py
   docx/                   Sample Word file from c9d_docx_build.py
   slides/                 Sample deck and contact sheet from c9d_slides_build.py
+  flyer/                  Sample one-page flyer from c9d_flyer_build.py
 
 docs/PACKAGE.md           The distribution archive's own README
 VERSION                   2.3
