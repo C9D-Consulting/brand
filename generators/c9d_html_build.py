@@ -16,11 +16,11 @@ import sys
 from collections import Counter
 from datetime import date
 
-VERSION = "1.1"
+VERSION = "1.2"
 
 REQUIRED_KEYS = ["file_id", "classification", "title", "subtitle",
                  "prepared_for", "prepared_by", "version", "section_marker"]
-CLASSIFICATIONS = {"OPERATING EVIDENCE", "CLIENT CONFIDENTIAL", "INTERNAL DRAFT", "REFUSED"}
+CLASSIFICATIONS = {"OPERATING EVIDENCE", "REFERENCE DESIGN", "CLIENT CONFIDENTIAL", "INTERNAL DRAFT", "REFUSED"}
 
 FONTS_HREF = ("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..600"
               "&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400..600&display=swap")
@@ -177,7 +177,7 @@ td.nw{white-space:nowrap}
   .rail{display:none}
   .prose p,.prose ul,.prose ol{max-width:none}
   .section{break-before:auto;padding-top:28pt}
-  .section h2,.prose h3,.prose h4{break-after:avoid}
+  .section__eyebrow,.section h2,.prose h3,.prose h4{break-after:avoid}
   tr{break-inside:avoid}
   thead{display:table-header-group}
   .table-wrap{overflow:visible}
