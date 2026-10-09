@@ -43,6 +43,7 @@ generators/               Scripts that produce the renders below
   c9d_docx_build.py       The same source to a branded Word file (light mode, fonts embedded)
   c9d_slides_build.py     Markdown with deck front matter to a branded HTML slide deck
   c9d_flyer_build.py      Markdown with document front matter to a one-page flyer PDF (proposed layout)
+  make_platform_logos.py  Composed plates for fixed-size platform slots, into assets/logos/
   samples/                Sources the generators build from
   fonts/                  Inter Tight and JetBrains Mono, see FONTS.md
 
@@ -64,16 +65,20 @@ Do not mix versions.
 
 ## Build
 
-Requires Python 3 with Pillow. The HTML build needs only the standard library. The Word build needs
-`python-docx` and `fonttools`, and fetches its font faces from the Google Fonts repository on first
-run into `generators/fonts/` (git-ignored). The slides build needs only the standard library to
-build; its render checks need Playwright for Python with Chromium.
+Requires Python 3 with Pillow. The HTML build needs only the standard library. The Word build
+needs `python-docx` and `fonttools`, and fetches its font faces from the Google Fonts repository
+on first run into `generators/fonts/` (git-ignored). The slides build needs only the standard
+library to build; its render checks need Playwright for Python with Chromium. The platform logo
+build needs `cairosvg`, because it renders the locked lockup from its SVG rather than redrawing
+it.
 
 ```
 make            Regenerate every render
 make icons      Notion database and page icons
 make covers     Notion teamspace and template covers
 make themes     Google shared drive banners
+make platform-logos
+                Fixed-size platform plates, such as the Google Workspace admin logo
 make html       Sample HTML document page, built and checked
 make docx       Sample Word document, built and checked
 make slides     Sample HTML slide deck, built, rendered and checked

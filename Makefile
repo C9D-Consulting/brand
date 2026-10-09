@@ -1,8 +1,8 @@
 PY ?= python3
 
-.PHONY: all icons covers themes html docx slides flyer dist clean
+.PHONY: all icons covers themes platform-logos html docx slides flyer dist clean
 
-all: icons covers themes html docx slides flyer
+all: icons covers themes platform-logos html docx slides flyer
 
 icons:
 	$(PY) generators/make_icons.py
@@ -12,6 +12,9 @@ covers:
 
 themes:
 	$(PY) generators/make_drive_themes.py
+
+platform-logos:
+	$(PY) generators/make_platform_logos.py
 
 html:
 	@mkdir -p renders/html
