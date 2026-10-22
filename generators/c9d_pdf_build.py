@@ -377,7 +377,7 @@ def lint(meta, body):
     if missing: issues.append("front matter missing: " + ", ".join(missing))
     full = body + " " + " ".join(meta.values())
     if "\u2014" in full: issues.append(f"em-dash x{full.count(chr(0x2014))}")
-    bare = re.findall(r"\bC9D\b(?! Consulting)", full)
+    bare = re.findall(r"\bC9D\b(?! Consulting)(?! Holdings)", full)
     if bare: issues.append(f"bare 'C9D' x{len(bare)}")
     ph = re.findall(r"(?<!\[)\[[^\]\[]+\](?![\]\(])", body)
     if ph: issues.append(f"unresolved [placeholders] x{len(ph)} (fine for a template, not for a delivered file)")

@@ -528,7 +528,7 @@ def lint(meta, slides, src_text, page):
     body = src_text.split("---", 2)[-1]
     prose = body + "\n" + meta["title"] + "\n" + meta["subtitle"]
     if "\u2014" in src_text: probs.append(f"voice: {src_text.count(chr(0x2014))} em-dash(es) in source")
-    bare = [m for m in re.finditer(r"\bC9D\b(?! Consulting)(?!-)", prose)]
+    bare = [m for m in re.finditer(r"\bC9D\b(?! Consulting)(?! Holdings)(?!-)", prose)]
     for m in bare:
         probs.append(f"voice: bare 'C9D' near {prose[max(0,m.start()-30):m.end()+20]!r}")
     for pat in REFUSED:
