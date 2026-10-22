@@ -778,7 +778,7 @@ def check(src, out, draft=False):
     if text.count(sig) < 2: problems.append("chrome: closing signature missing from cover or last page")
     prose = body + "\n" + meta.get("title", "") + "\n" + meta.get("subtitle", "")
     if "\u2014" in prose: problems.append(f"voice: {prose.count(chr(0x2014))} em-dash(es) in source")
-    bare = re.findall(r"\bC9D\b(?! (?i:consulting))(?!-)", prose)   # legal all-caps "C9D CONSULTING LLC" is the full form
+    bare = re.findall(r"\bC9D\b(?! (?i:consulting))(?! Holdings)(?!-)", prose)   # legal all-caps "C9D CONSULTING LLC" is the full form
     if bare: problems.append(f"voice: bare 'C9D' used {len(bare)} time(s); write 'C9D Consulting'")
     for pat in REFUSED:
         if re.search(pat, prose, re.I): problems.append(f"voice: refused vocabulary /{pat}/")

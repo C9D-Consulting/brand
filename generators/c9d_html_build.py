@@ -520,7 +520,7 @@ def check(src, out_path, draft=False):
     prose = body + "\n" + fm["title"] + "\n" + fm["subtitle"]
     if "\u2014" in prose:
         problems.append(f"voice: {prose.count(chr(0x2014))} em-dash(es) in source")
-    bare = [m.group(0) for m in re.finditer(r"\bC9D\b(?! Consulting)(?!-)", prose)]
+    bare = [m.group(0) for m in re.finditer(r"\bC9D\b(?! Consulting)(?! Holdings)(?!-)", prose)]
     if bare:
         problems.append(f"voice: bare 'C9D' used {len(bare)} time(s); write 'C9D Consulting'")
     for pat in REFUSED:
