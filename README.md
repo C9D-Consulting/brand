@@ -43,6 +43,7 @@ generators/               Scripts that produce the renders below
   c9d_docx_build.py       The same source to a branded Word file (light mode, fonts embedded)
   c9d_slides_build.py     Markdown with deck front matter to a branded HTML slide deck
   c9d_flyer_build.py      Markdown with document front matter to a one-page flyer PDF (proposed layout)
+  c9d_xero_invoice_build.py  The client invoice as a Xero custom .docx branding theme (proposed layout)
   make_platform_logos.py  Composed plates for fixed-size platform slots, into assets/logos/
   samples/                Sources the generators build from
   fonts/                  Inter Tight and JetBrains Mono, see FONTS.md
@@ -55,6 +56,7 @@ renders/                  Build output. Regenerable. Do not hand edit.
   docx/                   Sample Word file from c9d_docx_build.py
   slides/                 Sample deck and contact sheet from c9d_slides_build.py
   flyer/                  Sample one-page flyer from c9d_flyer_build.py
+  xero-invoice/           Xero invoice theme to upload, plus its sample render
 
 docs/PACKAGE.md           The distribution archive's own README
 VERSION                   2.3
@@ -78,6 +80,7 @@ make icons      Notion database and page icons
 make covers     Notion teamspace and template covers
 make themes     Google shared drive banners
 make platform-logos
+make xero-invoice  Xero invoice theme and sample render (needs LibreOffice and poppler)
                 Fixed-size platform plates, such as the Google Workspace admin logo
 make html       Sample HTML document page, built and checked
 make docx       Sample Word document, built and checked

@@ -1,8 +1,8 @@
 PY ?= python3
 
-.PHONY: all icons covers themes platform-logos html docx slides flyer dist clean
+.PHONY: all icons covers themes platform-logos html docx slides flyer xero-invoice dist clean
 
-all: icons covers themes platform-logos html docx slides flyer
+all: icons covers themes platform-logos html docx slides flyer xero-invoice
 
 icons:
 	$(PY) generators/make_icons.py
@@ -33,6 +33,13 @@ slides:
 flyer:
 	@mkdir -p renders/flyer
 	$(PY) generators/c9d_flyer_build.py generators/samples/flyer-sample.md renders/flyer/sample.pdf --verify
+
+xero-invoice:
+	@mkdir -p renders/xero-invoice
+	$(PY) generators/c9d_xero_invoice_build.py template renders/xero-invoice/c9d-consulting-invoice-xero-theme.docx
+	$(PY) generators/c9d_xero_invoice_build.py sample renders/xero-invoice/sample.docx
+	cd renders/xero-invoice && soffice --headless --convert-to pdf sample.docx >/dev/null && rm sample.docx
+	pdftoppm -r 110 -png -singlefile renders/xero-invoice/sample.pdf renders/xero-invoice/sample
 
 dist:
 	@mkdir -p dist
